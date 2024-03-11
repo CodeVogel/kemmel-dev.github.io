@@ -1,11 +1,17 @@
 import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
+import { mdsvex } from 'mdsvex';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	// Consult https://kit.svelte.dev/docs/integrations#preprocessors
 	// for more information about preprocessors
-	preprocess: vitePreprocess(),
+	preprocess: [
+		vitePreprocess(),
+		mdsvex({
+			extensions: ['.md']
+		})
+	],
 
 	kit: {
 		// adapter-auto only supports some environments, see https://kit.svelte.dev/docs/adapter-auto for a list.
@@ -16,7 +22,8 @@ const config = {
 	paths: {
 		// Change the first '' to your repository name if you are deploying a project site.
 		base: process.env.NODE_ENV === 'production' ? '' : '',
-	}
+	},
+	extensions: ['.svelte', '.md']
 };
 
 export default config;
