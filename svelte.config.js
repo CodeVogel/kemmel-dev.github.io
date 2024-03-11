@@ -12,6 +12,10 @@ const config = {
 		// If your environment is not supported or you settled on a specific environment, switch out the adapter.
 		// See https://kit.svelte.dev/docs/adapters for more information about adapters.
 		adapter: adapter()
+	},
+	paths: {
+		// Change the first '' to your repository name if you are deploying a project site.
+		base: process.env.NODE_ENV === 'production' ? '' : '',
 	}
 };
 
