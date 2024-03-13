@@ -9,7 +9,7 @@ const config = {
 	preprocess: [
 		vitePreprocess(),
 		mdsvex({
-			extensions: ['.md']
+			extensions: ['.svx']
 		})
 	],
 
@@ -23,7 +23,7 @@ const config = {
 		// Change the first '' to your repository name if you are deploying a project site.
 		base: process.env.NODE_ENV === 'production' ? '' : '',
 	},
-	extensions: ['.svelte', '.md']
+	extensions: ['.svelte', '.svx']
 };
 
 export default config;
