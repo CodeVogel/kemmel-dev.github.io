@@ -6,7 +6,7 @@
 </script>
 
 <ModeWatcher defaultMode={'dark'} />
-<main class="h-full bg-background">
+<main class="h-full font-sans bg-background">
 	<NavBar on:toggleTheme={toggleMode} />
 	<slot />
 	<Footer />
