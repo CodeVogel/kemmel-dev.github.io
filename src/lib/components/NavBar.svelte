@@ -21,7 +21,7 @@
 	};
 </script>
 
-<nav class="flex h-16 bg-black border-b-2 border-solid border-border">
+<nav class="flex h-16 border-b-2 border-solid border-border bg-background">
 	<div class="flex items-center h-full basis-1/4">
 		<Button href="/" variant="link">
 			<Logo />

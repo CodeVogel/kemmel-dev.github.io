@@ -59,7 +59,8 @@ const config = {
 				mono: ['"JetBrains Mono"', ...fontFamily.mono]
 			},
 			backgroundImage: {
-				emoji_pattern: "url('/background-tile.svg')"
+				emoji_pattern: "url('/background-tile.svg')",
+				emoji_pattern_dark: "url('/background-tile-dark.svg')"
 			}
 		}
 	},

@@ -8,9 +8,9 @@
 <ModeWatcher defaultMode={'dark'} />
 
 <main
-	class="flex flex-col min-h-screen bg-repeat bg-emoji_pattern bg-[length:256px_256px] bg-black bg-blend-overlay bg-opacity-95"
+	class="flex flex-col min-h-screen bg-repeat bg-emoji_pattern dark:bg-emoji_pattern_dark bg-[length:256px_256px] bg-background bg-blend-overlay bg-opacity-85 dark:bg-opacity-90"
 >
-	<NavBar />
+	<NavBar on:toggleTheme={toggleMode} />
 	<div id="content" class="flex flex-col justify-between flex-1 overflow-y-auto">
 		<div class="px-32 py-8">
 			<slot />
