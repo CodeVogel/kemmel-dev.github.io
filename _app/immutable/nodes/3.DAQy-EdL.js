@@ -1,0 +1,1 @@
+import{a as s,t as r,c as i,b as c,n as a,d as m}from"../chunks/scheduler.i3PeGIOh.js";import{S as l,i as p}from"../chunks/index.DV6bCWmH.js";function u(o){let t;return{c(){t=r("About me!")},l(e){t=i(e,"About me!")},m(e,n){c(e,t,n)},p:a,i:a,o:a,d(e){e&&m(t)}}}class x extends l{constructor(t){super(),p(this,t,null,u,s,{})}}export{x as component};
