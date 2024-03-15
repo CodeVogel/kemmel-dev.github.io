@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import Placeholder from '$lib/Placeholder.svelte';
+	import Placeholder from '$lib/components/Placeholder.svelte';
 
 	let svxComponent: any;
 	let faultyPath: string;
@@ -11,10 +11,10 @@
 		try {
 			// Dynamic import restrictions restrict the use of variables in the import statement,
 			// hence we can't re-use the path for faultyPath
-			svxComponent = (await import(`./svx/${name}.svx`)).default;
+			svxComponent = (await import(`../svx/${name}.svx`)).default;
 		} catch (e: any) {
 			svxComponent = null;
-			faultyPath = `./svx/${name}.svx`;
+			faultyPath = `../svx/${name}.svx`;
 		}
 	}
 

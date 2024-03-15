@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { ModeWatcher, toggleMode } from 'mode-watcher';
 	import '../app.pcss';
-	import NavBar from '$lib/NavBar.svelte';
-	import Footer from '$lib/Footer.svelte';
+	import NavBar from '$lib/components/NavBar.svelte';
+	import Footer from '$lib/components/Footer.svelte';
 </script>
 
 <ModeWatcher defaultMode={'dark'} />
