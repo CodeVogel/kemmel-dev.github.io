@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Logo from '$lib/components/Logo.svelte';
+	import Logo from '$lib/components/logo/Logo.svelte';
 	import ThemeButton from '$lib/components/ui/button/ThemeButton.svelte';
 	import Button from '$lib/components/ui/button/button.svelte';
 	import NavButton from '$lib/components/ui/button/NavButton.svelte';

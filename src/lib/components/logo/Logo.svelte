@@ -3,3 +3,7 @@
 	<div class="typewriter">CodeVogel&nbsp<span class="emoji">🐦</span></div>
 	<span class="caret">_</span>
 </div>
+
+<style>
+	@import './typewriter.pcss';
+</style>
