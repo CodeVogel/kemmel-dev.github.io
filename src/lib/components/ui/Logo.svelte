@@ -1,1 +1,1 @@
-<div class="text-3xl font-bold">🐦 CodeVogel</div>
+<div class="text-3xl font-bold text-black dark:text-white">🐦 CodeVogel</div>
