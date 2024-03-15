@@ -55,7 +55,8 @@ const config = {
 				sm: "calc(var(--radius) - 4px)"
 			},
 			fontFamily: {
-				sans: ['"Plus Jakarta Sans"', ...fontFamily.sans]
+				sans: ['"Plus Jakarta Sans"', ...fontFamily.sans],
+				mono: ['"JetBrains Mono"', ...fontFamily.mono]
 			}
 		}
 	},

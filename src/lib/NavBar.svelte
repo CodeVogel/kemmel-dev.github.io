@@ -7,9 +7,9 @@
 
 	// The pages to be displayed in the navbar.
 	const pages = [
-		{ name: 'Home', href: '/' },
-		{ name: 'Projects', href: '/projects' },
-		{ name: 'About', href: '/about' }
+		{ name: '/', href: '/' },
+		{ name: '/projects', href: '/projects' },
+		{ name: '/about', href: '/about' }
 	];
 	// Equally sized array to keep track of which button is hovered.
 	const hoveredOverPage = Array(pages.length).fill(false);
