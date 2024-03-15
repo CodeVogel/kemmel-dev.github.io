@@ -57,6 +57,9 @@ const config = {
 			fontFamily: {
 				sans: ['"Plus Jakarta Sans"', ...fontFamily.sans],
 				mono: ['"JetBrains Mono"', ...fontFamily.mono]
+			},
+			backgroundImage: {
+				emoji_pattern: "url('/background-tile.svg')"
 			}
 		}
 	},
