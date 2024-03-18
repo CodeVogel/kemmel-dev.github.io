@@ -21,11 +21,11 @@
 	};
 </script>
 
-<nav class="flex h-16 border-b-2 border-solid border-border bg-background">
+<nav class="flex h-16 border-b-2 border-opacity-50 border-border bg-background">
 	<div class="flex items-center h-full basis-1/4">
-		<Button href="/" variant="link">
+		<a href="/" class="ms-8">
 			<Logo />
-		</Button>
+		</a>
 	</div>
 	<div class="flex items-center justify-center h-full basis-1/2">
 		{#each pages as page, index}
@@ -36,8 +36,5 @@
 				<Separator orientation="vertical" class="h-8 {shouldHide(index) ? 'bg-transparent' : ''}" />
 			{/if}
 		{/each}
-	</div>
-	<div class="flex items-center justify-end h-full px-8 basis-1/4">
-		<ThemeButton on:toggleTheme />
 	</div>
 </nav>
