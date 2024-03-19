@@ -1,18 +1,16 @@
-<script lang="ts">
-    import BirdLogo from "$lib/components/logo/BirdLogo.svelte";
-</script>
-
-
-<div class="py-8">
-    <BirdLogo/>
-</div>
-
 
 # Hi!
 
-## I am CodeVogel.
+## My name is <span class="text-primary">CodeVogel</span>.
+
+<div>
+    <br>
+</div>
+
+I <span class="text-primary">develop games</span> and <span class="text-primary">build software</span>.
+
+<div class="text-sm">
+    <br> This website is currently under development.
+</div>
 
 
-I develop games, websites, and love design. 
-
-This website is currently under development.
