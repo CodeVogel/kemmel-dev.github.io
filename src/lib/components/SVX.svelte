@@ -18,11 +18,42 @@
 		}
 	}
 
-	export let name = '';
+	export let name = '',
+		centerX = false,
+		centerY = false,
+		background = 'bg-none';
 </script>
 
 {#if svxComponent !== null}
-	<svelte:component this={svxComponent}></svelte:component>
+	<div class="svx {background} {centerX ? 'svx-center-x' : ''} {centerY ? 'svx-center-y' : ''}">
+		<svelte:component this={svxComponent} class="svx"></svelte:component>
+	</div>
 {:else}
 	<Placeholder path={faultyPath} />
 {/if}
+
+<style>
+	.svx {
+		@apply flex flex-col flex-grow;
+	}
+
+	.svx-center-x {
+		@apply items-center;
+	}
+
+	.svx-center-y {
+		@apply justify-center;
+	}
+
+	:global(.svx > h1) {
+		@apply text-4xl;
+	}
+
+	:global(.svx > h2) {
+		@apply text-3xl;
+	}
+
+	:global(.svx > h2) {
+		@apply text-2xl;
+	}
+</style>
