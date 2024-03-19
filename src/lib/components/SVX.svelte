@@ -21,12 +21,20 @@
 	export let name = '',
 		centerX = false,
 		centerY = false,
-		background = 'bg-none';
+		grow = false,
+		options = '';
 </script>
 
 {#if svxComponent !== null}
-	<div class="svx {background} {centerX ? 'svx-center-x' : ''} {centerY ? 'svx-center-y' : ''}">
-		<svelte:component this={svxComponent} class="svx"></svelte:component>
+	<div
+		class="svx
+		{grow ? 'flex-grow h-full' : ''} 
+		{options.length !== 0 ? options : ''} 
+		{centerX ? 'svx-center-x' : ''} 
+		{centerY ? 'svx-center-y' : ''}
+		"
+	>
+		<svelte:component this={svxComponent}></svelte:component>
 	</div>
 {:else}
 	<Placeholder path={faultyPath} />
@@ -34,7 +42,7 @@
 
 <style>
 	.svx {
-		@apply flex flex-col flex-grow;
+		@apply flex flex-col;
 	}
 
 	.svx-center-x {
@@ -46,14 +54,19 @@
 	}
 
 	:global(.svx > h1) {
-		@apply text-4xl;
+		@apply text-6xl font-bold;
 	}
 
 	:global(.svx > h2) {
-		@apply text-3xl;
+		@apply text-4xl font-semibold;
 	}
 
-	:global(.svx > h2) {
-		@apply text-2xl;
+	:global(.svx table) {
+		@apply border-separate border-spacing-x-8;
+	}
+
+	:global(.svx table td),
+	:global(.svx table th) {
+		@apply align-top text-left;
 	}
 </style>
