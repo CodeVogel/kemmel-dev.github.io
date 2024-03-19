@@ -1,7 +1,5 @@
 <script lang="ts">
-	import Logo from '$lib/components/logo/Logo.svelte';
-	import ThemeButton from '$lib/components/ui/button/ThemeButton.svelte';
-	import Button from '$lib/components/ui/button/button.svelte';
+	import WordLogo from '$lib/components/logo/WordLogo.svelte';
 	import NavButton from '$lib/components/ui/button/NavButton.svelte';
 	import Separator from '$lib/components/ui/separator/separator.svelte';
 
@@ -24,7 +22,7 @@
 <nav class="flex h-16 border-b-2 border-opacity-50 border-border bg-background">
 	<div class="flex items-center h-full basis-1/4">
 		<a href="/" class="ms-8">
-			<Logo />
+			<WordLogo />
 		</a>
 	</div>
 	<div class="flex items-center justify-center h-full basis-1/2">
