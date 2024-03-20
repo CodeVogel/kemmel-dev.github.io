@@ -4,5 +4,7 @@
 	import SVX from '$lib/components/SVX.svelte';
 </script>
 
-<BirdLogo />
-<h1>Hi!</h1>
+<div class="flex flex-col items-center justify-center flex-grow h-full text-center">
+	<BirdLogo />
+	<SVX name="home-page" centerX={true} />
+</div>
