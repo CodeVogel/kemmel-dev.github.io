@@ -4,21 +4,5 @@
 	import SVX from '$lib/components/SVX.svelte';
 </script>
 
-<div class="flex flex-grow">
-	<div
-		class="flex flex-col items-center bg-primary text-black justify-center [&>*]:py-8 first:[&>*]:pt-0 last:[&>*]:pb-0 divide-y-[1px] divide-accent basis-1/3"
-	>
-		<BirdLogo accent="fill-black" />
-		<h1>CodeVogel</h1>
-		<SVX name="contact-info" options="font-light" />
-		<SocialLinks options="text-6xl" />
-	</div>
-	<div class="basis-2/3">
-		<SVX
-			name="home-page"
-			centerY={true}
-			grow={true}
-			options="flex-grow px-32 [&>p]:font-light [&>p]:text-2xl "
-		/>
-	</div>
-</div>
+<BirdLogo />
+<h1>Hi!</h1>

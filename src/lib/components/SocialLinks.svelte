@@ -1,20 +1,24 @@
 <script lang="ts">
-	export let options = '';
+	import Separator from '$lib/components/ui/separator/separator.svelte';
 
+	export let className = '';
 	let socials = [
-		{ icon: 'mdi:github', href: 'https://github.com/kemmel-dev/', name: 'Github' },
+		{ icon: 'mdi:github', href: '/someLink.html', name: 'GitHub' },
 		{ icon: 'mdi:linkedin', href: '/someLink.html', name: 'LinkedIn' },
 		{ icon: 'mdi:resume', href: '/someLink.html', name: 'Resume' }
 	];
 </script>
 
 <div
-	class="flex flex-row gap-x-8 {options} divide-x-[1px] [&>*]:px-8 first:[&>*]:ps-0 last:[&>*]:pe-0 divide-accent"
+	class="grid items-center justify-center h-full grid-flow-col-dense grid-rows-1 text-4xl gap-x-8 text-foreground/40"
 >
-	{#each socials as social}
-		<a href={social.href} class="flex flex-col items-center hover:text-primary">
+	{#each socials as social, i}
+		<a href={social.href} class="flex flex-col items-center justify-center">
 			<iconify-icon icon={social.icon}></iconify-icon>
-			<div class="text-[30%] font-extralight">{social.name}</div>
+			<div class="text-sm">{social.name}</div>
 		</a>
+		{#if i !== socials.length - 1}
+			<Separator orientation="vertical" class="h-8" />
+		{/if}
 	{/each}
 </div>

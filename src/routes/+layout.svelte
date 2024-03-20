@@ -6,10 +6,12 @@
 	import { page } from '$app/stores';
 </script>
 
-<main class="flex flex-col min-h-screen text-white dark bg-background">
+<main class="flex flex-col text-foreground dark bg-background h-[100vh]">
 	<NavBar />
-	<div id="content" class="flex flex-col justify-between flex-1 overflow-y-auto">
-		<slot />
+	<div class="flex flex-col mt-32 h-[calc(100dvh-8rem)]">
+		<div class="flex-grow bg-background">
+			<slot />
+		</div>
 		{#if $page.url.pathname !== '/'}
 			<Footer />
 		{/if}

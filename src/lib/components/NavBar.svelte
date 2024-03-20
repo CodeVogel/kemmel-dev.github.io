@@ -10,7 +10,7 @@
 	];
 </script>
 
-<nav class="grid items-center justify-center h-32 grid-rows-2">
+<nav class="fixed grid items-center justify-center w-full h-32 grid-rows-2 bg-background">
 	<a href="/" class="mt-6">
 		<WordLogo />
 	</a>
