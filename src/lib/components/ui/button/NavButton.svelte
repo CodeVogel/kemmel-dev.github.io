@@ -1,4 +1,6 @@
 <script lang="ts">
+	export { className as class };
+	let className: string = '';
 	export let href: string,
 		name: string,
 		hovered: boolean = false;
@@ -9,7 +11,7 @@
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
 <a
 	{href}
-	class="flex items-center h-full px-8 font-mono text-xl hover:bg-accent text-primary hover:text-black dark:hover:text-white"
+	class={className}
 	on:mouseover={() => (hovered = true)}
 	on:mouseleave={() => (hovered = false)}
 >
