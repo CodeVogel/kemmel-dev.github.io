@@ -6,9 +6,9 @@
 
 <div class="flex flex-grow">
 	<div
-		class="flex flex-col items-center justify-center [&>*]:py-8 first:[&>*]:pt-0 last:[&>*]:pb-0 divide-y-[1px] divide-accent basis-1/3"
+		class="flex flex-col items-center bg-primary text-black justify-center [&>*]:py-8 first:[&>*]:pt-0 last:[&>*]:pb-0 divide-y-[1px] divide-accent basis-1/3"
 	>
-		<BirdLogo />
+		<BirdLogo accent="fill-black" />
 		<h1>CodeVogel</h1>
 		<SVX name="contact-info" options="font-light" />
 		<SocialLinks options="text-6xl" />
