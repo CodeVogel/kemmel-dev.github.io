@@ -8,6 +8,7 @@
 
 <main class="flex flex-col text-foreground dark bg-background h-[100vh]">
 	<NavBar />
+	<!-- 8rem = size of navbar height -->
 	<div class="flex flex-col mt-32 h-[calc(100dvh-8rem)]">
 		<div class="flex-grow bg-background">
 			<slot />
