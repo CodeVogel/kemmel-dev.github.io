@@ -1,34 +1,28 @@
 <script lang="ts">
-	import '../app.css';
-	import NavBar from '$lib/components/NavBar.svelte';
-	import Footer from '$lib/components/Footer.svelte';
-	import 'iconify-icon';
 	import { page } from '$app/stores';
+	import NavBar from '$lib/components/NavBar.svelte';
+	import '../app.css';
+	import 'iconify-icon';
 </script>
 
-<main class="flex flex-col text-foreground dark bg-background h-[100vh]">
-	<NavBar />
-	<!-- 8rem = size of navbar height -->
-	<div class="flex flex-col mt-32 h-[calc(100dvh-8rem)]">
-		<div class="flex-grow bg-background">
+<main class="flex flex-col text-foreground">
+	<NavBar class="h-[6rem]" />
+	<div class="mt-[6rem] h-[calc(100vh-6rem)]">
+		<div class="min-h-[calc(100dvh-6rem-6rem)]">
 			<slot />
 		</div>
 		{#if $page.url.pathname !== '/'}
-			<Footer />
+			<footer class="bg-red-500 min-h-[6rem]">Footer.</footer>
 		{/if}
 	</div>
 </main>
 
 <style>
-	:global(h1) {
-		@apply text-6xl font-bold;
+	:global(html) {
+		@apply bg-gradient-to-b from-red-500 to-red-900 bg-fixed;
 	}
 
-	:global(h2) {
-		@apply text-4xl font-semibold;
-	}
-
-	:global(h3) {
-		@apply text-2xl font-light;
+	:global(body) {
+		@apply min-h-[100dvh];
 	}
 </style>

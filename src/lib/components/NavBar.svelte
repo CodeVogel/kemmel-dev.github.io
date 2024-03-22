@@ -8,9 +8,12 @@
 		{ name: '/projects', href: '/projects' },
 		{ name: '/about', href: '/about' }
 	];
+
+	let className = '';
+	export { className as class };
 </script>
 
-<nav class="fixed grid items-center justify-center w-full h-32 grid-rows-2 bg-background">
+<nav class="{className} fixed grid items-center justify-center w-full grid-rows-2">
 	<a href="/" class="mt-6">
 		<WordLogo />
 	</a>
