@@ -13,7 +13,7 @@
 	export { className as class };
 </script>
 
-<nav class="{className} fixed grid items-center justify-center w-full grid-rows-2">
+<nav class="{className} grid items-center justify-center w-full grid-rows-2">
 	<a href="/" class="mt-6">
 		<WordLogo />
 	</a>

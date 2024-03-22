@@ -5,16 +5,18 @@
 	import 'iconify-icon';
 </script>
 
-<main class="flex flex-col text-foreground">
-	<NavBar class="h-[6rem]" />
-	<div class="mt-[6rem] h-[calc(100vh-6rem)]">
-		<div class="min-h-[calc(100dvh-6rem-6rem)]">
-			<slot />
-		</div>
-		{#if $page.url.pathname !== '/'}
-			<footer class="bg-red-500 min-h-[6rem]">Footer.</footer>
-		{/if}
+<main
+	class="flex flex-col text-white bg-fixed bg-gradient-to-b from-black via-70% via-black to-[#222222]"
+>
+	<NavBar
+		class="h-[6rem] fixed  bg-gradient-to-b from-black via-40% via-black to-[#222222] bg-fixed"
+	/>
+	<div class="min-h-[calc(100dvh-6rem-6rem)] mt-[6rem]">
+		<slot />
 	</div>
+	{#if $page.url.pathname !== '/'}
+		<footer class="min-h-[6rem]">Footer.</footer>
+	{/if}
 </main>
 
 <style>
@@ -22,7 +24,7 @@
 		@apply bg-gradient-to-b from-red-500 to-red-900 bg-fixed;
 	}
 
-	:global(body) {
-		@apply min-h-[100dvh];
+	:global(body, main) {
+		@apply min-h-[100vh];
 	}
 </style>
