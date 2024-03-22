@@ -3,9 +3,13 @@
 
 	export let className = '';
 	let socials = [
-		{ icon: 'mdi:github', href: '/someLink.html', name: 'GitHub' },
-		{ icon: 'mdi:linkedin', href: '/someLink.html', name: 'LinkedIn' },
-		{ icon: 'mdi:resume', href: '/someLink.html', name: 'Resume' }
+		{ icon: 'mdi:github', href: 'https://github.com/kemmel-dev/', name: 'GitHub' },
+		{
+			icon: 'mdi:linkedin',
+			href: 'https://www.linkedin.com/in/kamiel-de-visser/',
+			name: 'LinkedIn'
+		},
+		{ icon: 'mdi:resume', href: 'https://github.com/', name: 'Resume' }
 	];
 </script>
 
