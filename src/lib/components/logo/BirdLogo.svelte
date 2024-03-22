@@ -16,7 +16,7 @@
 			}
 
 			.cls-3 {
-				fill: #fbb040;
+				fill: #facc15;
 			}
 
 			.cls-4 {
