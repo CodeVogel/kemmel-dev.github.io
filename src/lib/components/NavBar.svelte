@@ -13,11 +13,13 @@
 	export { className as class };
 </script>
 
-<nav class="{className} grid items-center justify-center w-full grid-rows-2">
+<nav
+	class="{className} grid items-center justify-center w-full grid-rows-2 border-b-[1px] border-accent"
+>
 	<a href="/" class="mt-6">
 		<WordLogo />
 	</a>
-	<div class="grid justify-center grid-flow-col-dense grid-rows-1 gap-x-4">
+	<div class="grid justify-center grid-flow-col-dense grid-rows-1 mt-4 gap-x-4">
 		{#each pages as page, index}
 			<a href={page.href} class="text-primary hover:text-accent-foreground">{page.name}</a>
 			<!-- Skip the separator if no more items follow -->
