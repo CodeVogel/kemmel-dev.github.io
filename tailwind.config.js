@@ -14,7 +14,8 @@ const config = {
 		extend: {
 			colors: {
 				background : "#000000",
-				primary: '#FFAC15'
+				primary: '#facc15',
+				accent: '#222222'
 			},
 			fontFamily: {
 				sans: ['"Plus Jakarta Sans"', ...fontFamily.sans],
