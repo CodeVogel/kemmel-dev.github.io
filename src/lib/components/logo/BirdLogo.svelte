@@ -1,5 +1,7 @@
 <script lang="ts">
+	let className = '';
 	export let accent: string = 'fill-white';
+	export { className as class };
 </script>
 
 <svg
@@ -7,7 +9,7 @@
 	data-name="Layer 2"
 	xmlns="http://www.w3.org/2000/svg"
 	viewBox="0 0 18.27 18.41"
-	height="128px"
+	class={className}
 >
 	<defs>
 		<style>
