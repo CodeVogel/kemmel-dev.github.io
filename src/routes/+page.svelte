@@ -7,11 +7,11 @@
 	<div class="h-24">
 		<AutoGrowTypeWriter
 			class="p-8 rounded-lg bg-accent"
-			msDelayBetweenChars={50}
+			msDelayBetweenChars={150}
 			msDelayBetweenElements={1000}
 		>
-			<div>Hello <b>World</b></div>
-			<div>This is a test.</div>
+			<div>Hello World <b>&nbsp;Big World</b></div>
+			<p class="p-2 bg-red-400">Check this out!</p>
 		</AutoGrowTypeWriter>
 	</div>
 
