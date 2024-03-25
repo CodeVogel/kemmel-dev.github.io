@@ -1,4 +1,4 @@
-import{s as a,n as u}from"../chunks/scheduler.CBNpBL1s.js";import{S as r,i as n,t as l,b as m,g as o,d as c}from"../chunks/index.BBlcEul7.js";function d(t){let e;return{c(){e=l(`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nunc erat, pretium vitae erat quis,\r
+import{s as a,t as r,d as n,i as l,n as u,f as m}from"../chunks/scheduler.D3Y6t5Mm.js";import{S as o,i as c}from"../chunks/index.DB5AeIKO.js";function d(t){let e;return{c(){e=r(`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nunc erat, pretium vitae erat quis,\r
 pulvinar porttitor massa. Nullam semper rutrum est, mattis tempor lectus tempus non. Mauris sed eros\r
 quis dui fermentum lobortis et a odio. Suspendisse ut ligula in sem rhoncus aliquam. Integer\r
 venenatis cursus lectus. Etiam et laoreet risus. Fusce mollis, augue vel aliquet ullamcorper, orci\r
@@ -62,7 +62,7 @@ feugiat, fringilla suscipit lectus congue. Sed lacinia quam non posuere mollis. 
 erat eu feugiat dictum. Aenean congue orci leo, luctus efficitur ipsum lobortis quis. Duis laoreet\r
 id est id consequat. Maecenas vestibulum dapibus lectus at hendrerit. Ut nibh urna, ultricies a\r
 tellus quis, venenatis luctus sapien. Fusce massa nisl, elementum quis vulputate nec, interdum\r
-vestibulum sapien. Nulla ac neque et arcu vestibulum pharetra vulputate nec orci.`)},l(i){e=m(i,`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nunc erat, pretium vitae erat quis,\r
+vestibulum sapien. Nulla ac neque et arcu vestibulum pharetra vulputate nec orci.`)},l(i){e=n(i,`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nunc erat, pretium vitae erat quis,\r
 pulvinar porttitor massa. Nullam semper rutrum est, mattis tempor lectus tempus non. Mauris sed eros\r
 quis dui fermentum lobortis et a odio. Suspendisse ut ligula in sem rhoncus aliquam. Integer\r
 venenatis cursus lectus. Etiam et laoreet risus. Fusce mollis, augue vel aliquet ullamcorper, orci\r
@@ -126,4 +126,4 @@ feugiat, fringilla suscipit lectus congue. Sed lacinia quam non posuere mollis. 
 erat eu feugiat dictum. Aenean congue orci leo, luctus efficitur ipsum lobortis quis. Duis laoreet\r
 id est id consequat. Maecenas vestibulum dapibus lectus at hendrerit. Ut nibh urna, ultricies a\r
 tellus quis, venenatis luctus sapien. Fusce massa nisl, elementum quis vulputate nec, interdum\r
-vestibulum sapien. Nulla ac neque et arcu vestibulum pharetra vulputate nec orci.`)},m(i,s){o(i,e,s)},p:u,i:u,o:u,d(i){i&&c(e)}}}class q extends r{constructor(e){super(),n(this,e,null,d,a,{})}}export{q as component};
+vestibulum sapien. Nulla ac neque et arcu vestibulum pharetra vulputate nec orci.`)},m(i,s){l(i,e,s)},p:u,i:u,o:u,d(i){i&&m(e)}}}class q extends o{constructor(e){super(),c(this,e,null,d,a,{})}}export{q as component};
