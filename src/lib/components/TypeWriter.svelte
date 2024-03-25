@@ -3,8 +3,8 @@
 
 	const dispatch = createEventDispatcher();
 
-	let msDelayBetweenElements = 1500;
-	let msDelayBetweenChars = 50;
+	let msDelayBetweenElements = 500;
+	let msDelayBetweenChars = 150;
 	let dataCleared = false;
 	let root: HTMLDivElement;
 	let clone: HTMLDivElement;
@@ -42,14 +42,20 @@
 			const newNode = document.createElement(sourceNode.tagName);
 			copyAttributes(sourceNode, newNode);
 			targetElement.appendChild(newNode);
+
+			newNode.innerHTML += '.';
+			// Dispatch 'elementAdded' event
 			dispatch('elementAdded');
+			newNode.innerHTML = newNode.innerHTML.slice(0, -1);
+
 			await delay(msDelayBetweenElements);
 			await addContentWithDelay(sourceNode, newNode);
 		} else if (sourceNode instanceof Text) {
 			// When dealing with a text node, we can simply add it to the target element
 			// one character at a time.
-
-			await addTextElementPerCharacterWithDelay(sourceNode, targetElement);
+			if (sourceNode.textContent!.trim().length > 0) {
+				await addTextElementPerCharacterWithDelay(sourceNode, targetElement);
+			}
 		}
 	}
 
@@ -58,10 +64,16 @@
 		const text = textNode.textContent || '';
 		const textElement = document.createTextNode('');
 		target.appendChild(textElement);
+
+		textElement.textContent += '.';
+		// Dispatch 'elementAdded' event
+		dispatch('elementAdded');
+		textElement.textContent = textElement.textContent!.slice(0, -1);
+
+		await delay(msDelayBetweenElements);
 		// Remove the last 5 characters from target.innerHTML
 		for (const char of text) {
 			textElement.textContent += char;
-			dispatch('elementAdded');
 			await delay(msDelayBetweenChars);
 		}
 	}

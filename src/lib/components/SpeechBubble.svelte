@@ -2,31 +2,23 @@
 	import { onMount } from 'svelte';
 	import TypeWriter from './TypeWriter.svelte';
 
-	let contentHeight = 24;
-
-	onMount(() => {
-		contentHeight = 24;
-	});
+	let contentHeight = 0;
 
 	function updateHeight() {
-		const speechBubble = document.getElementById('wrapper');
-		// Get height of the element inside the speech bubble
-		const height = speechBubble.scrollHeight;
-		// Set the height of the speech bubble to the height of the element inside
-		contentHeight = height;
+		console.log('updateHeight');
+		contentHeight = document.querySelector('#wrapper').scrollHeight;
 	}
 </script>
 
 <div class="flex justify-center mt-24">
 	<div
 		id="wrapper"
-		class="w-full overflow-hidden duration-500 rounded-md transition-height bg-slate-400"
+		class="w-full p-8 m-8 overflow-hidden duration-500 rounded-md transition-height bg-slate-400"
 		style="height: {contentHeight}px;"
 	>
 		<TypeWriter on:elementAdded={updateHeight}>
-			<div>Hallo <b>lieve</b></div>
-			<div class="bg-red-600">Wereld.</div>
-			Test.
+			<h1>Hallootjes</h1>
+			<div class="p-8 bg-red-400 rounded-lg w-fit">Wereld.</div>
 		</TypeWriter>
 	</div>
 </div>
