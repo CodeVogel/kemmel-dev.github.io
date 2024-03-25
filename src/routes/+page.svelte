@@ -1,6 +1,5 @@
 <script lang="ts">
 	import AutoGrowTypeWriter from '$lib/components/AutoGrowTypeWriter.svelte';
-	import TestComponent from '$lib/components/TestComponent.svelte';
 	import BirdLogo from '$lib/components/logo/BirdLogo.svelte';
 </script>
 
