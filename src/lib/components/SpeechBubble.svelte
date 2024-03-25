@@ -1,41 +1,32 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
 	import TypeWriter from './TypeWriter.svelte';
 
-	let height = 0;
+	let contentHeight = 24;
 
-	function onChange() {
-		const speechBubble = document.querySelector('#typewriter-content');
-		height = speechBubble.offsetHeight;
-		console.log('height after change: ' + height);
+	onMount(() => {
+		contentHeight = 24;
+	});
+
+	function updateHeight() {
+		const speechBubble = document.getElementById('wrapper');
+		// Get height of the element inside the speech bubble
+		const height = speechBubble.scrollHeight;
+		// Set the height of the speech bubble to the height of the element inside
+		contentHeight = height;
 	}
 </script>
 
 <div class="flex justify-center mt-24">
-	<div class="speech-bubble" style={`height:${height}px`}>
-		<div class="p-8" id={'typewriter-content'}>
-			<TypeWriter on:change={onChange} class="" />
-		</div>
+	<div
+		id="wrapper"
+		class="w-full overflow-hidden duration-500 rounded-md transition-height bg-slate-400"
+		style="height: {contentHeight}px;"
+	>
+		<TypeWriter on:elementAdded={updateHeight}>
+			<div>Hallo <b>lieve</b></div>
+			<div class="bg-red-600">Wereld.</div>
+			Test.
+		</TypeWriter>
 	</div>
 </div>
-
-<style>
-	.speech-bubble {
-		background: red;
-		position: relative;
-		border-radius: 0.4em;
-		transition: height 0.5s ease;
-	}
-
-	.speech-bubble:after {
-		content: '';
-		position: absolute;
-		bottom: 0;
-		left: 50%;
-		width: 0;
-		border: 20px solid transparent;
-		border-top-color: red;
-		border-bottom: 0;
-		margin-left: -20px;
-		margin-bottom: -20px;
-	}
-</style>

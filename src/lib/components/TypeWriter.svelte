@@ -1,74 +1,94 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import { createEventDispatcher } from 'svelte';
+	import { onMount, createEventDispatcher } from 'svelte';
 
 	const dispatch = createEventDispatcher();
 
-	let element;
-	let allElements;
+	let msDelayBetweenElements = 1500;
+	let msDelayBetweenChars = 50;
+	let dataCleared = false;
+	let root: HTMLDivElement;
+	let clone: HTMLDivElement;
+	let className = '';
+	let styleName = '';
 
 	onMount(() => {
-		element = document.querySelector('#typewriter-content');
-
-		if (element) {
-			element.innerHTML = '';
-			console.log(element.innerHTML);
-		}
-
-		let parser = new DOMParser();
-		const doc = parser
-			.parseFromString(
-				'<h1>Hello</h1><h2>World</h2><div>This is</div><div>some text yo.</div>',
-				'text/html'
-			)
-			.querySelector('body');
-		allElements = findAllElements(doc);
-		addToElement(element, allElements);
+		clone = root.cloneNode(true) as HTMLDivElement;
+		clearData();
+		addContentWithDelay(clone, root);
 	});
 
-	async function addToElement(currentElement, allElements) {
-		if (currentElement) {
-			for (let i = 0; i < allElements.length; i++) {
-				let newElement = document.createElement(allElements[i][0]);
-				currentElement.appendChild(newElement);
-				if (Array.isArray(allElements[i][1])) {
-					await addToElement(newElement, allElements[i][1]);
-				} else {
-					await typeText(newElement, allElements[i][1]);
-				}
-				// Add a delay here
-				dispatch('change');
-				await new Promise((r) => setTimeout(r, 250));
-			}
+	// Clear the data in the root element (after the clone has been created)
+	function clearData() {
+		while (root.firstChild) {
+			root.removeChild(root.firstChild);
+		}
+		dataCleared = true;
+	}
+
+	// Add the content of the clone to the root element with a delay
+	async function addContentWithDelay(clonedElement: HTMLElement, targetElement: HTMLElement) {
+		for (const clonedChild of clonedElement.childNodes) {
+			await addNodeWithDelay(clonedChild, targetElement);
 		}
 	}
 
-	async function typeText(element, text) {
-		for (let i = 0; i < text.length; i++) {
-			if (i == 0) {
-				element.innerHTML += '<br>';
-				dispatch('change');
-				await new Promise((r) => setTimeout(r, 500));
-				element.innerHTML = element.innerHTML.slice(0, -4);
-			}
-			element.innerHTML += text[i];
+	// Add an element from source to target with a delay
+	async function addNodeWithDelay(sourceNode: Node, targetElement: HTMLElement) {
+		if (sourceNode instanceof HTMLElement) {
+			// When dealing with an HTML element, it may have children,
+			// so we need to create a new empty element, copy the attributes
+			// of the original element, and then recursively handle potential children
+			// to finish this branch of the tree
+			const newNode = document.createElement(sourceNode.tagName);
+			copyAttributes(sourceNode, newNode);
+			targetElement.appendChild(newNode);
+			dispatch('elementAdded');
+			await delay(msDelayBetweenElements);
+			await addContentWithDelay(sourceNode, newNode);
+		} else if (sourceNode instanceof Text) {
+			// When dealing with a text node, we can simply add it to the target element
+			// one character at a time.
 
-			// Add a delay here
-			await new Promise((r) => setTimeout(r, 50));
+			await addTextElementPerCharacterWithDelay(sourceNode, targetElement);
 		}
 	}
 
-	function findAllElements(doc) {
-		let elements = [];
-		let child = doc.firstElementChild;
-		if (child) {
-			elements.push([child.tagName, findAllElements(child)]);
-			while (child.nextElementSibling != null) {
-				child = child.nextElementSibling;
-				elements.push([child.tagName, findAllElements(child)]);
-			}
-			return elements;
+	// Add a text node to the target element, then adds one character at a time with a delay
+	async function addTextElementPerCharacterWithDelay(textNode: Text, target: HTMLElement) {
+		const text = textNode.textContent || '';
+		const textElement = document.createTextNode('');
+		target.appendChild(textElement);
+		// Remove the last 5 characters from target.innerHTML
+		for (const char of text) {
+			textElement.textContent += char;
+			dispatch('elementAdded');
+			await delay(msDelayBetweenChars);
 		}
-		return doc.innerHTML;
 	}
+
+	// Copy the attributes from one element to another
+	function copyAttributes(source: HTMLElement, target: HTMLElement) {
+		Array.from(source.attributes).forEach((attr) => {
+			target.setAttribute(attr.name, attr.value);
+		});
+	}
+
+	// Waits for a certain amount of time
+	function delay(ms: number) {
+		return new Promise((resolve) => setTimeout(resolve, ms));
+	}
+
+	export { className as class };
+	export { styleName as style };
 </script>
+
+<!-- To prevent the slotted content from appearing before onMount removes it's contents, 
+	 it starts with display:none. -->
+<div
+	id="typewriter-content"
+	class={className}
+	bind:this={root}
+	style={dataCleared ? '' : 'display:none;' + styleName}
+>
+	<slot />
+</div>
