@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { ContextMenu } from 'bits-ui';
 	import { onMount, createEventDispatcher } from 'svelte';
 
 	const dispatch = createEventDispatcher();
@@ -55,29 +54,30 @@
 					}
 
 					newDestination.textContent += '.';
-					dispatch('elementAdded', { element: destination });
+					dispatch('elementAdded');
 					newDestination.textContent = newDestination.textContent.slice(0, -1);
-					await delay(addedToRoot ? msDelayBetweenElements : msDelayBetweenChars);
 					await addContentWithDelay(clonedChild as HTMLElement, newDestination as HTMLElement);
 					break;
 			}
 			clone.removeChild(clonedChild);
+			if (addedToRoot)
+				await delay(
+					clonedChild.nodeType === Node.TEXT_NODE ? msDelayBetweenChars : msDelayBetweenElements
+				);
 		}
 	}
 
 	async function addTextWithDelay(content: string, destination: Text, addedToRoot: boolean) {
 		destination.textContent += '.';
-		dispatch('elementAdded', { element: destination });
 		destination.textContent = destination.textContent.slice(0, -1);
-		await delay(addedToRoot ? msDelayBetweenElements : msDelayBetweenChars);
 		for (let i = 0; i < content.length; i++) {
 			destination.textContent += content[i];
-			console.log('test test ');
 			await delay(msDelayBetweenChars);
+			dispatch('elementAdded');
 		}
 	}
 
-	export let msDelayBetweenElements = 5000,
+	export let msDelayBetweenElements = 1000,
 		msDelayBetweenChars = 150;
 	export { className as class };
 	export { styleName as style };
