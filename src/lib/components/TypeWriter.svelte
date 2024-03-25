@@ -3,16 +3,14 @@
 
 	const dispatch = createEventDispatcher();
 
-	let msDelayBetweenElements = 500;
-	let msDelayBetweenChars = 150;
 	let dataCleared = false;
-	let root: HTMLDivElement;
-	let clone: HTMLDivElement;
+	let root: HTMLElement;
+	let clone: HTMLElement;
 	let className = '';
 	let styleName = '';
 
 	onMount(() => {
-		clone = root.cloneNode(true) as HTMLDivElement;
+		clone = root.cloneNode(true) as HTMLElement;
 		clearData();
 		addContentWithDelay(clone, root);
 	});
@@ -90,6 +88,8 @@
 		return new Promise((resolve) => setTimeout(resolve, ms));
 	}
 
+	export let msDelayBetweenElements = 500,
+		msDelayBetweenChars = 150;
 	export { className as class };
 	export { styleName as style };
 </script>
