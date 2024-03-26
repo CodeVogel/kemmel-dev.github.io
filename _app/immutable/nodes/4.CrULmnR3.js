@@ -1,4 +1,4 @@
-import{s as a,t as r,d as n,i as l,n as u,f as m}from"../chunks/scheduler.D3Y6t5Mm.js";import{S as o,i as c}from"../chunks/index.DB5AeIKO.js";function d(t){let e;return{c(){e=r(`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nunc erat, pretium vitae erat quis,\r
+import{s as a,t as r,d as n,i as l,n as u,f as m}from"../chunks/scheduler.yePr0l9o.js";import{S as o,i as c}from"../chunks/index.BqUE8MCu.js";function d(t){let e;return{c(){e=r(`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nunc erat, pretium vitae erat quis,\r
 pulvinar porttitor massa. Nullam semper rutrum est, mattis tempor lectus tempus non. Mauris sed eros\r
 quis dui fermentum lobortis et a odio. Suspendisse ut ligula in sem rhoncus aliquam. Integer\r
 venenatis cursus lectus. Etiam et laoreet risus. Fusce mollis, augue vel aliquet ullamcorper, orci\r
