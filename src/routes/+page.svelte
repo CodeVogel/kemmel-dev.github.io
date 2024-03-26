@@ -9,7 +9,7 @@
 			<AutoGrowTypeWriter
 				class="p-8 rounded-lg bg-accent"
 				msDelayBetweenChars={50}
-				msDelayBetweenElements={1500}
+				msDelayBetweenElements={1250}
 			>
 				<h1>Hi!</h1>
 				<h2>
