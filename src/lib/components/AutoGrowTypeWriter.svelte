@@ -14,15 +14,23 @@
 	export { className as class };
 	export let msDelayBetweenElements = 5000,
 		msDelayBetweenChars = 150,
-		msDelayHeightTransition = 300;
+		msDelayHeightTransition = 300,
+		preRender = false;
 </script>
 
 <div
 	bind:this={wrapper}
 	class="{className} overflow-hidden rounded-md transition-height"
-	style="height: {contentHeight}px; transition-duration: {msDelayHeightTransition}ms;"
+	style="{preRender
+		? ''
+		: 'height: {contentHeight}px;'} transition-duration: {msDelayHeightTransition}ms;"
 >
-	<TypeWriter on:elementAdded={updateHeight} {msDelayBetweenChars} {msDelayBetweenElements}>
+	<TypeWriter
+		on:elementAdded={updateHeight}
+		{preRender}
+		{msDelayBetweenChars}
+		{msDelayBetweenElements}
+	>
 		<slot />
 	</TypeWriter>
 </div>

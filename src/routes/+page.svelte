@@ -4,26 +4,40 @@
 </script>
 
 <div class="flex flex-col items-center justify-center flex-grow h-full gap-y-8">
-	<div class="grid items-end justify-center h-64 grid-rows-1">
+	<div class="grid items-end justify-center grid-rows-1 h-[24rem]">
 		<div class="w-64 max-w-64 speech-bubble">
 			<AutoGrowTypeWriter
 				class="p-8 rounded-lg bg-accent"
 				msDelayBetweenChars={50}
-				msDelayBetweenElements={1250}
+				msDelayBetweenElements={50}
+				preRender={false}
 			>
 				<h1>Hi!</h1>
 				<h2>
-					My name is <br /><span class="font-bold text-black bg-primary">CodeVogel</span>.
+					My name is <br />
+					<span class="flex flex-row items-baseline">
+						<div class="px-1 py-1 mt-2 font-bold text-black rounded-lg w-fit bg-primary">
+							CodeVogel
+						</div>
+						.
+					</span>
 				</h2>
-				<span class="font-extralight"
-					>I make <span class="text-primary">games</span> and build
-					<span class="text-primary">software</span>.</span
-				>
+				<div class="mt-2 font-extralight">
+					I make <span class="text-primary">games</span> and build
+					<span class="text-primary">software</span>.
+				</div>
+				<div class="font-extralight">
+					Check out some of my
+					<a href="/projects" class="font-normal underline text-primary"
+						><span>projects<iconify-icon class="ms-1" icon="ion:open-outline"></iconify-icon></span
+						></a
+					>
+					!
+				</div>
 			</AutoGrowTypeWriter>
 		</div>
 	</div>
-
-	<BirdLogo class="max-h-[3lh]" />
+	<BirdLogo class="max-h-[5lh]" />
 </div>
 
 <style>
@@ -32,7 +46,7 @@
 	}
 
 	.speech-bubble {
-		@apply relative bg-accent rounded-lg;
+		@apply relative bg-accent rounded-2xl;
 	}
 
 	.speech-bubble:after {
@@ -43,7 +57,7 @@
 		width: 0;
 		height: 0;
 		border: 1em solid transparent;
-		border-top-color: theme('colors.accent');
+		border-top-color: theme('colors.accent.DEFAULT');
 		border-bottom: 0;
 		border-left: 0;
 		margin-left: -0.5em;

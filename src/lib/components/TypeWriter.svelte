@@ -10,6 +10,11 @@
 	let styleName = '';
 
 	onMount(() => {
+		if (preRender) {
+			root.style.display = '';
+			return;
+		}
+
 		clone = root.cloneNode(true) as HTMLElement;
 		clearData();
 		addContentWithDelay(clone, root);
@@ -78,7 +83,8 @@
 	}
 
 	export let msDelayBetweenElements = 1000,
-		msDelayBetweenChars = 150;
+		msDelayBetweenChars = 150,
+		preRender = false;
 	export { className as class };
 	export { styleName as style };
 </script>
