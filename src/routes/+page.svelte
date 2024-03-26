@@ -5,7 +5,7 @@
 
 <div class="flex flex-col items-center justify-center flex-grow h-full gap-y-8">
 	<div class="grid items-end justify-center h-64 grid-rows-1">
-		<div class="w-64 max-w-64 speech-bubble [&.speech-bubble]:after:border-t-accent">
+		<div class="w-64 max-w-64 speech-bubble">
 			<AutoGrowTypeWriter
 				class="p-8 rounded-lg bg-accent"
 				msDelayBetweenChars={50}
@@ -43,6 +43,7 @@
 		width: 0;
 		height: 0;
 		border: 1em solid transparent;
+		border-top-color: theme('colors.accent');
 		border-bottom: 0;
 		border-left: 0;
 		margin-left: -0.5em;
