@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import NavBar from '$lib/components/NavBar.svelte';
+	import NavBar from '$lib/components/ui/navigation/NavBar.svelte';
 	import '../app.css';
 	import 'iconify-icon';
 </script>
