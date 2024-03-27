@@ -16,7 +16,7 @@
 		const active = $page.url.pathname === route.href;
 		if (active) {
 			const noOtherRouteHovered = routes
-				.filter((route) => route.href !== '/') // Exclude the current page
+				.filter((route) => route.href !== $page.url.pathname) // Exclude the current page
 				.every((route) => !route.hovered);
 			if (noOtherRouteHovered) return 'text-primary';
 		}
