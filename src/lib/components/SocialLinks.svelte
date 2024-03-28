@@ -14,12 +14,17 @@
 </script>
 
 <div
-	class="grid items-center justify-center h-full grid-flow-col-dense grid-rows-1 text-4xl gap-x-8 text-foreground/40"
+	class="grid items-center justify-center h-full grid-flow-col-dense grid-rows-1 text-4xl gap-x-8 text-primary"
 >
 	{#each socials as social, i}
-		<a href={social.href} class="flex flex-col items-center justify-center">
+		<a
+			href={social.href}
+			class="flex flex-col items-center justify-center p-2 transition-colors duration-500 text-primary/25 hover:text-primary"
+		>
 			<iconify-icon icon={social.icon}></iconify-icon>
-			<div class="text-sm">{social.name}</div>
+			<div class="text-sm">
+				{social.name}
+			</div>
 		</a>
 		{#if i !== socials.length - 1}
 			<Separator orientation="vertical" class="h-8" />
