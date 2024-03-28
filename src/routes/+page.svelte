@@ -3,8 +3,8 @@
 	import BirdLogo from '$lib/components/logo/BirdLogo.svelte';
 </script>
 
-<div class="flex flex-col items-center justify-center flex-grow h-full gap-y-8">
-	<div class="grid items-end justify-center grid-rows-1 h-[11rem]">
+<div class="flex flex-col items-center justify-center flex-grow gap-y-8">
+	<div class="grid grid-rows-1 h-[20rem] items-end">
 		<div class="w-64 max-w-64 speech-bubble">
 			<AutoGrowTypeWriter
 				class="p-8 rounded-lg bg-accent"
@@ -37,6 +37,7 @@
 			</AutoGrowTypeWriter>
 		</div>
 	</div>
+
 	<BirdLogo class="max-h-[5lh]" />
 </div>
 
