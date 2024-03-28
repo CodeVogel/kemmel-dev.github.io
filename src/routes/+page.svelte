@@ -4,7 +4,7 @@
 </script>
 
 <div class="flex flex-col items-center justify-center flex-grow h-full gap-y-8">
-	<div class="grid items-end justify-center grid-rows-1 h-[24rem]">
+	<div class="grid items-end justify-center grid-rows-1 h-[11rem]">
 		<div class="w-64 max-w-64 speech-bubble">
 			<AutoGrowTypeWriter
 				class="p-8 rounded-lg bg-accent"
