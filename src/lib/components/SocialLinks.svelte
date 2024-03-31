@@ -14,7 +14,7 @@
 </script>
 
 <div
-	class="grid items-center justify-center h-full grid-flow-col-dense grid-rows-1 text-4xl gap-x-8 text-primary"
+	class="z-10 grid items-end justify-center h-full grid-flow-col-dense grid-rows-1 text-4xl gap-x-8 text-primary"
 >
 	{#each socials as social, i}
 		<a

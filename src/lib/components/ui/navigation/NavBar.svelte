@@ -27,11 +27,11 @@
 	export { className as class };
 </script>
 
-<nav class="{className} grid items-center justify-center w-full grid-rows-2">
-	<a href="/" class="mt-6">
+<nav class="{className} flex flex-col items-center w-full">
+	<a href="/" class="mt-2">
 		<WordLogo />
 	</a>
-	<div class="grid justify-center grid-flow-col-dense grid-rows-1 mt-4 gap-x-4">
+	<div class="grid items-start justify-center grid-flow-col-dense grid-rows-1 gap-x-4">
 		{#each routes as route, index}
 			<NavButton
 				class="{navButtonColor(

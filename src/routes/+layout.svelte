@@ -9,14 +9,18 @@
 
 <main class="z-10 flex flex-col text-white overflow-x-clip">
 	<NavBar class="h-[6rem] fixed bg-background-800" />
-	<WaveBorder class="mt-[6rem] fixed h-[4rem]" />
+	<WaveBorder
+		flipY={false}
+		class="mt-[6rem] fixed h-[4rem] bg-gradient-to-b from-background-800 to-background-400 border-b-[1px] border-accent/50 shadow-2xl"
+	/>
 	<div class="flex flex-col min-h-[calc(100dvh-10rem-4rem)] mt-[10rem]">
 		<slot />
 	</div>
 	{#if $page.url.pathname !== '/'}
-		<Footer class="min-h-[4rem]" />
+		<Footer class="min-h-[6rem]" />
+	{:else}
+		<WaveBorder flipY={true} class="h-[4rem] " />
 	{/if}
-	<WaveBorder flipY={true} class="fixed bottom-0 h-[4rem] " />
 </main>
 
 <style>
