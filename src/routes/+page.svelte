@@ -1,6 +1,6 @@
 <script lang="ts">
-	import AutoGrowTypeWriter from '$lib/components/AutoGrowTypeWriter.svelte';
-	import BirdLogo from '$lib/components/logo/BirdLogo.svelte';
+	import AutoGrowTypeWriter from '$lib/components/typewriter/AutoGrowTypeWriter.svelte';
+	import BirdLogo from '$lib/components/ui/polish/logo/BirdLogo.svelte';
 </script>
 
 <div class="flex flex-col items-center justify-center flex-grow gap-y-8">

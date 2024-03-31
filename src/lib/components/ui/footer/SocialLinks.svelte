@@ -1,6 +1,4 @@
 <script lang="ts">
-	import Separator from '$lib/components/ui/separator/separator.svelte';
-
 	export let className = '';
 	let socials = [
 		{ icon: 'mdi:github', href: 'https://github.com/kemmel-dev/', name: 'GitHub' },
@@ -26,8 +24,5 @@
 				{social.name}
 			</div>
 		</a>
-		{#if i !== socials.length - 1}
-			<Separator orientation="vertical" class="h-8" />
-		{/if}
 	{/each}
 </div>

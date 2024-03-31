@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import Footer from '$lib/components/Footer.svelte';
+	import Footer from '$lib/components/ui/footer/Footer.svelte';
 	import NavBar from '$lib/components/ui/navigation/NavBar.svelte';
 	import '../app.css';
 	import 'iconify-icon';
-	import WaveBorder from '$lib/components/WaveBorder.svelte';
+	import WaveBorder from '$lib/components/ui/polish/WaveBorder.svelte';
 </script>
 
 <main class="z-10 flex flex-col text-white overflow-x-clip">

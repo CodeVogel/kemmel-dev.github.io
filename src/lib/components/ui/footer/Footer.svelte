@@ -1,6 +1,6 @@
 <script lang="ts">
-	import SocialLinks from '$lib/components/SocialLinks.svelte';
-	import WaveBorder from '$lib/components/WaveBorder.svelte';
+	import SocialLinks from '$lib/components/ui/footer/SocialLinks.svelte';
+	import WaveBorder from '$lib/components/ui/polish/WaveBorder.svelte';
 
 	let className: string = '';
 	export { className as class };

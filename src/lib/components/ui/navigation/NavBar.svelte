@@ -1,6 +1,5 @@
 <script lang="ts">
-	import WordLogo from '$lib/components/logo/WordLogo.svelte';
-	import Separator from '$lib/components/ui/separator/separator.svelte';
+	import WordLogo from '$lib/components/ui/polish/logo/WordLogo.svelte';
 	import { page } from '$app/stores';
 	import NavButton from './NavButton.svelte';
 
@@ -31,7 +30,7 @@
 	<a href="/" class="mt-2">
 		<WordLogo />
 	</a>
-	<div class="grid items-start justify-center grid-flow-col-dense grid-rows-1 gap-x-4">
+	<div class="grid items-start justify-center grid-flow-col-dense grid-rows-1 gap-x-8">
 		{#each routes as route, index}
 			<NavButton
 				class="{navButtonColor(
@@ -41,11 +40,6 @@
 				href={route.href}
 				bind:hovered={route.hovered}
 			/>
-			<!-- Skip the separator if no more items follow -->
-			{#if index !== routes.length - 1}
-				<!-- bg-transparant ensures the separator is hidden but navbar stays the same size. -->
-				<Separator orientation="vertical" class="h-8" />
-			{/if}
 		{/each}
 	</div>
 </nav>
