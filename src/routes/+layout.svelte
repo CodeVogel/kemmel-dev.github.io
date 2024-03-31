@@ -20,11 +20,16 @@
 </main>
 
 <style>
-	:global(html, body) {
+	:global(html) {
 		@apply bg-background-950;
+	}
+
+	:global(body) {
+		@apply bg-[url('/tile.png')];
 	}
 
 	:global(body, main) {
 		@apply min-h-[100vh];
+		background-position: center;
 	}
 </style>

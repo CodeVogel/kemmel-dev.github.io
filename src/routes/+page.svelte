@@ -4,23 +4,20 @@
 </script>
 
 <div class="flex flex-col items-center justify-center flex-grow gap-y-8">
-	<div class="grid grid-rows-1 h-[20rem] items-end">
-		<div class="w-64 max-w-64 speech-bubble">
+	<div class="grid grid-rows-1 h-[16rem] items-end">
+		<div class="min-w-[27ch] md:min-w-[34ch] speech-bubble">
 			<AutoGrowTypeWriter
-				class="p-8 rounded-lg bg-accent"
+				class="p-6 rounded-lg bg-accent"
 				msDelayBetweenChars={50}
-				msDelayBetweenElements={50}
+				msDelayBetweenElements={500}
 				preRender={false}
 			>
 				<h1>Hi!</h1>
 				<h2>
-					My name is <br />
-					<span class="flex flex-row items-baseline">
-						<div class="px-1 py-1 mt-2 font-bold text-black rounded-lg w-fit bg-primary">
-							CodeVogel
-						</div>
-						.
-					</span>
+					<div class="max-w-[9ch] sm:max-w-full">
+						My name is
+						<span class="px-1 font-bold text-black rounded-lg w-fit bg-primary"> CodeVogel </span>.
+					</div>
 				</h2>
 				<div class="mt-2 font-extralight">
 					I make <span class="text-primary">games</span> and build
@@ -37,7 +34,6 @@
 			</AutoGrowTypeWriter>
 		</div>
 	</div>
-
 	<BirdLogo class="max-h-[5lh]" />
 </div>
 
