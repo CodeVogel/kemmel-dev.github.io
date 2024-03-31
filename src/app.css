@@ -4,12 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-	.background-gradient {
-		@apply bg-fixed bg-gradient-to-b from-background via-70% via-background to-accent;
-	}
-}
-
 h1 {
 	@apply text-6xl font-bold;
 }
