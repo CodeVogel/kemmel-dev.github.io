@@ -1,0 +1,7 @@
+---
+title: Detective Duck
+---
+
+# {title}
+
+test.

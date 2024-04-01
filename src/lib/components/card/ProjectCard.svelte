@@ -1,5 +1,5 @@
 <script lang="ts">
-	export let project: ProjectDetail | null = null;
+	export let project: ProjectSummary | null = null;
 </script>
 
 {#if project !== null}

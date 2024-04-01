@@ -1,20 +1,25 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import Placeholder from '$lib/components/Placeholder.svelte';
+	import Placeholder from '$lib/components/svx/Placeholder.svelte';
 
 	let svxComponent: any;
 	let faultyPath: string;
 
-	onMount(async () => await loadSVX(name));
+	onMount(async () => {
+		await loadSVX(name);
+	});
 
 	async function loadSVX(name: string) {
 		try {
 			// Dynamic import restrictions restrict the use of variables in the import statement,
 			// hence we can't re-use the path for faultyPath
-			svxComponent = (await import(`../svx/${name}.svx`)).default;
+			const svx = await import(`../../svx/${name}.svx`);
+			svxComponent = svx.default;
+			metadata = svx.metadata;
 		} catch (e: any) {
 			svxComponent = null;
-			faultyPath = `../svx/${name}.svx`;
+			metadata = null;
+			faultyPath = `../../svx/${name}.svx`;
 		}
 	}
 
@@ -22,14 +27,15 @@
 		centerX = false,
 		centerY = false,
 		grow = false,
-		options = '';
+		options = '',
+		metadata = null;
 </script>
 
 {#if svxComponent !== null}
 	<div
 		class="svx
 		{grow ? 'flex-grow h-full' : ''} 
-		{options.length !== 0 ? options : ''} 
+		{options} 
 		{centerX ? 'svx-center-x' : ''} 
 		{centerY ? 'svx-center-y' : ''}
 		"
