@@ -1,5 +1,7 @@
 ---
 title: Detective Duck
+media: e1HN3MVz4hs
+description: My graduation thesis project.
 ---
 
 # {title}

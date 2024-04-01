@@ -13,7 +13,7 @@
 		try {
 			// Dynamic import restrictions restrict the use of variables in the import statement,
 			// hence we can't re-use the path for faultyPath
-			const svx = await import(`../../svx/${name}.svx`);
+			const svx = await import(/* @vite-ignore */ `../../svx/${name}.svx`);
 			svxComponent = svx.default;
 			metadata = svx.metadata;
 		} catch (e: any) {

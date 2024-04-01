@@ -1,5 +1,6 @@
 interface ProjectSummary {
+    svxName?: string;
     title?: string;
     description?: string;
-    image?: string;
+    media?: string;
 }
