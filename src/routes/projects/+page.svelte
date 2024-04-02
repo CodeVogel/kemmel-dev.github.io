@@ -18,7 +18,8 @@
 
 	async function getProjects() {
 		// Get all metadata from files in $lib/svx
-		const files = import.meta.glob('$lib/svx/*.svx');
+		const files = import.meta.glob('/src/svx/*.svx');
+		console.log('files: ', files);
 		// Load ProjectSummary from the frontmatter of each file
 		let projects: ProjectSummary[] = [];
 		for (const path in files) {
