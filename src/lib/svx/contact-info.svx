@@ -1,5 +1,0 @@
-|           |                                |
-|----------:|--------------------------------|
-| Name:     | Kamiel de Visser               |
-| Age:      | 26                             |
-| Location: | Amsterdam, <br>The Netherlands |
