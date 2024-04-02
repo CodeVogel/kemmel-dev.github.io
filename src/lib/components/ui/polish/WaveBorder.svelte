@@ -15,12 +15,10 @@
 			offsetX -= speed;
 			if (offsetX === resetPoint) {
 				offsetX = 0;
-				console.log('reset', offsetX);
 			}
 			if (offsetX < resetPoint) {
 				let rest = resetPoint - offsetX;
 				offsetX = -rest;
-				console.log('reset', offsetX);
 			}
 		}, animationRate);
 
