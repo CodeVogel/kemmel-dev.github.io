@@ -1,5 +1,5 @@
 <script lang="ts">
-	import AutoGrowTypeWriter from '$lib/components/typewriter/AutoGrowTypeWriter.svelte';
+	import AutoGrowTypeWriter from '$lib/components/ui/polish/typewriter/AutoGrowTypeWriter.svelte';
 	import BirdLogo from '$lib/components/ui/polish/logo/BirdLogo.svelte';
 </script>
 

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import TypeWriter from '$lib/components/typewriter/TypeWriter.svelte';
+	import TypeWriter from '$lib/components/ui/polish/typewriter/TypeWriter.svelte';
 
 	let contentHeight = 0;
 	let wrapper: HTMLDivElement;
