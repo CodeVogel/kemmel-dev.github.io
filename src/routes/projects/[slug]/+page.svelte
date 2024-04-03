@@ -1,8 +1,8 @@
 <script lang="ts">
-	import SVX from '$lib/components/svx/SVX.svelte';
-	import { page } from '$app/stores';
+	export let data;
 </script>
 
 <div class="flex justify-center w-full">
-	<SVX name={$page.params.slug} options="max-w-[64ch]"></SVX>
+	{data.meta.title}
+	<svelte:component this={data.content} />
 </div>
