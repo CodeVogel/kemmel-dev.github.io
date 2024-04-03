@@ -21,7 +21,7 @@ const config = {
 	},
 	paths: {
 		// Change the first '' to your repository name if you are deploying a project site.
-		base: process.env.NODE_ENV === 'production' ? '' : '',
+		base: process.env.NODE_ENV === 'production' ? '' : ''
 	},
 	extensions: ['.svelte', '.svx']
 };
