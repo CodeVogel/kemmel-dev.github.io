@@ -13,7 +13,7 @@
 		flipY={false}
 		class="mt-[6rem] fixed h-[4rem] bg-gradient-to-b from-background-800 to-background-400 border-b-[1px] border-accent/50 shadow-2xl"
 	/>
-	<div class="flex flex-col min-h-[calc(100dvh-10rem-4rem)] mt-[10rem]">
+	<div class="flex flex-col flex-grow mt-[10rem]">
 		<slot />
 	</div>
 	{#if $page.url.pathname !== '/'}
