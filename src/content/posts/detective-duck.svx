@@ -2,11 +2,20 @@
 title: Detective Duck
 description: My graduation thesis project.
 date: '2023-4-14'
-type: project
+category: project
 published: true
+headerImage: test
 ---
 
-## Markdown
+# First Header
+
+Hello world!
+
+## Second Header
+
+This is some text.
+
+### Third header
 
 Hey friends! 👋
 
