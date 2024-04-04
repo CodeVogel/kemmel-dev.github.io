@@ -1,4 +1,4 @@
-import type { Post } from '$lib/model';
+import { missingPostProps, type Post } from '$lib/model';
 import { json } from '@sveltejs/kit';
 
 // Gets all posts.
@@ -15,10 +15,16 @@ async function getPosts() {
 
 		// Check if the file is an object, has metadata (frontmatter) and slug was parsed
 		if (file && typeof file === 'object' && 'metadata' in file && slug) {
-			const frontMatter = file.metadata as Omit<Post, 'slug'>;
-			// Create the post
-			const post = { ...frontMatter, slug } satisfies Post;
-			if (post.published) posts.push(post);
+			const frontMatter = file.metadata;
+			const missingProps = missingPostProps(frontMatter);
+			if (missingProps.length > 0)
+			{
+				console.log(`Post ${slug} is missing the following properties, or they are null: ${missingProps.join(', ')}`);
+				continue;
+			}
+			const post = frontMatter as Omit<Post, 'slug'>;
+			posts.push({ ...post, slug }); 
+
 		}
 	}
 
