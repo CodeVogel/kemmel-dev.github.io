@@ -2,7 +2,7 @@ import { error } from '@sveltejs/kit';
 
 export async function load({ params }) {
 	try {
-		const post = await import(`../../../content/posts/${params.slug}.svx`);
+		const post = await import(`../../../content/posts/projects/${params.slug}.svx`);
 
 		return {
 			content: post.default,
