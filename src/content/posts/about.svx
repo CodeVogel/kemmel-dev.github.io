@@ -1,0 +1,13 @@
+---
+title: About me
+---
+
+# This is some content for the about page.
+
+Wow!
+
+<style>
+    .toc {
+        display:none;
+    }
+</style>

@@ -6,7 +6,7 @@ async function getPosts() {
 	let posts: Post[] = [];
 
 	// Get all the SVX files
-	const paths = import.meta.glob('/src/content/posts/**/*.svx', { eager: true });
+	const paths = import.meta.glob('/src/content/posts/*.svx', { eager: true });
 
 	for (const path in paths) {
 		const file = paths[path];

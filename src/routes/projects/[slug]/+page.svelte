@@ -1,21 +1,26 @@
 <script lang="ts">
-	export let data: import('./$types').PageData;
+	import { page } from '$app/stores';
+	import { onMount } from 'svelte';
+	import { loadSvx } from '$lib/loadSvx';
+
+	onMount(async () => {
+		data = await loadSvx($page.params.slug);
+	});
+
+	let data: any;
 </script>
 
 <div class="flex justify-center w-full px-6 py-4">
 	<div class="flex flex-col max-w-[64ch] w-full">
-		<span class="title">{data.meta.title}</span>
 		<div id="post-container" style="--start: 0">
-			<svelte:component this={data.content} />
+			{#if data}
+				<svelte:component this={data.content} />
+			{/if}
 		</div>
 	</div>
 </div>
 
 <style>
-	.title {
-		@apply text-5xl font-bold;
-	}
-
 	:global(#post-container .toc::before) {
 		content: 'Table of Contents';
 		@apply text-xl font-semibold;
