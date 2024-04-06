@@ -1,36 +1,32 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import { onMount } from 'svelte';
-	import { loadSvx } from '$lib/loadSvx';
+	import SvxRenderer from '$lib/components/svx/SvxRenderer.svelte';
+	import { fade } from 'svelte/transition';
 
-	onMount(async () => {
-		data = await loadSvx($page.params.slug);
-	});
-
-	let data: any;
+	let frontMatter: any = null;
+	let contentVisible: boolean = false;
 </script>
 
-<div class="flex justify-center w-full px-6 py-4">
-	<div class="flex flex-col max-w-[64ch] w-full">
-		<div id="post-container" style="--start: 0">
-			{#if data}
-				<svelte:component this={data.content} />
-			{/if}
-		</div>
+<div class="grid justify-center grid-rows-1">
+	<div class="flex flex-col items-start max-w-[64ch]">
+		{#if frontMatter !== null && contentVisible}
+			<h1 transition:fade>{frontMatter.title}</h1>
+		{/if}
+		<SvxRenderer slug={$page.params.slug} bind:frontMatter bind:contentVisible />
 	</div>
 </div>
 
 <style>
-	:global(#post-container .toc::before) {
+	:global(.post-container .toc::before) {
 		content: 'Table of Contents';
 		@apply text-xl font-semibold;
 	}
 
-	:global(#post-container .shiki) {
+	:global(.post-container .shiki) {
 		@apply overflow-x-scroll;
 	}
 
-	:global(#post-container code) {
+	:global(.post-container code) {
 		counter-reset: step;
 		counter-increment: step calc(var(--start, 1) - 1);
 	}
