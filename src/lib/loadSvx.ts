@@ -1,14 +1,12 @@
-import { error } from "@sveltejs/kit";
-
 export async function loadSvx(slug: string) {
+    const path = `../content/posts/${slug}.svx`;
     try {
-        const post = await import(`../content/posts/${slug}.svx`);
-
+        const post = await import(/* @vite-ignore */ path);
         return {
             content: post.default,
             meta: post.metadata
         };
     } catch (e) {
-        error(404, `Could not find `);
+        throw { status: 404, message: `Did not find a .svx with slug "${slug}", supposedly located at ../content/posts/${slug}.svx`};
     }
 }
