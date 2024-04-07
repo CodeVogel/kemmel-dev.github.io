@@ -1,7 +1,6 @@
 export async function loadSvx(slug: string) {
-    const path = `../content/posts/${slug}.svx`;
     try {
-        const post = await import(/* @vite-ignore */ path);
+        const post = await import(`../content/posts/${slug}.svx`);
         return {
             content: post.default,
             meta: post.metadata
