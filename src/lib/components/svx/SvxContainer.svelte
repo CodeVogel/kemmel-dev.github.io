@@ -7,7 +7,7 @@
 <style lang="scss">
 	:global {
 		.post-container {
-			@apply px-8 mb-8;
+			@apply px-8 pb-[8rem] mb-[-6rem] bg-background-950 border-s-4 border-e-4 border-accent;
 
 			h1 {
 				@apply py-4 my-4 first:mt-0;
