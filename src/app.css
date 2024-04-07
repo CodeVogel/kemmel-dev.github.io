@@ -11,3 +11,19 @@ h1 {
 h2 {
 	@apply text-2xl font-semibold;
 }
+
+html {
+	@apply scroll-smooth;
+}
+
+@layer utilities {
+	.breakout-title {
+		h1 {
+			@apply text-black py-4 my-4 first:mt-0 bg-accent/50;
+			width: 100vw;
+			box-shadow: 0 0 0 100vmax color-mix(in srgb, theme('colors.accent.DEFAULT'), transparent 50%);
+			color: white;
+			clip-path: inset(0 0px 0 -100vw);
+		}
+	}
+}

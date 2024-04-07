@@ -7,11 +7,11 @@
 	import WaveBorder from '$lib/components/ui/polish/WaveBorder.svelte';
 </script>
 
-<main class="z-10 flex flex-col text-white overflow-x-clip">
-	<NavBar class="h-[6rem] fixed bg-background-800" />
+<main class="flex flex-col text-white overflow-x-clip">
+	<NavBar class="h-[6rem] fixed bg-background-800 z-50" />
 	<WaveBorder
 		flipY={false}
-		class="mt-[6rem] fixed h-[4rem] bg-gradient-to-b from-background-800 to-background-400 border-b-[1px] border-accent/50 shadow-2xl"
+		class="mt-[6rem] fixed h-[4rem] bg-gradient-to-b from-background-800 to-background-400 border-b-[1px] border-accent/50 shadow-2xl z-50"
 	/>
 	<div class="flex flex-col flex-grow mt-[10rem]">
 		<slot />
@@ -25,11 +25,10 @@
 
 <style>
 	:global(html) {
-		@apply bg-background-950;
+		@apply bg-background-900;
 	}
 
 	:global(body) {
-		@apply bg-[url('/tile.png')];
 	}
 
 	:global(body, main) {
