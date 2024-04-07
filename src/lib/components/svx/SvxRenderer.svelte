@@ -16,6 +16,7 @@
 
 {#await promise}
 	<div
+		class="flex justify-center w-full pt-16"
 		transition:fade
 		on:outroend={() => {
 			contentVisible = true;
