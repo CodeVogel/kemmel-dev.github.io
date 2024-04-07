@@ -29,6 +29,8 @@
 	}
 
 	:global(body) {
+		@apply bg-[url('/tile7.svg')];
+		background-size: 500px;
 	}
 
 	:global(body, main) {
