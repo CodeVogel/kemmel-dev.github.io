@@ -1,39 +1,28 @@
 <script lang="ts">
+	import SvxContainer from '$lib/components/svx/SvxContainer.svelte';
+	import Spinner from '$lib/components/ui/polish/spinner/Spinner.svelte';
 	import { loadSvx } from '$lib/loadSvx';
 	import { fade } from 'svelte/transition';
-	import Spinner from '$lib/components/ui/polish/spinner/Spinner.svelte';
-	import ErrorRenderer from './ErrorRenderer.svelte';
 
-	export let contentVisible: boolean;
 	export let slug: string;
-	export let frontMatter: any;
-
-	const promise = loadSvx(slug).then((result) => {
-		frontMatter = result.meta;
-		return result;
-	});
+	let contentVisible = false;
 </script>
 
-{#await promise}
+{#await loadSvx(slug, 2000)}
 	<div
-		class="flex justify-center w-full pt-16"
+		class="grid justify-center grid-rows-1 m-8"
 		transition:fade
-		on:outroend={() => {
-			contentVisible = true;
-		}}
+		on:outroend={() => (contentVisible = true)}
 	>
-		<Spinner></Spinner>
+		<Spinner />
 	</div>
 {:then svx}
 	{#if contentVisible}
 		<div transition:fade>
-			<svelte:component this={svx.content} />
-		</div>
-	{/if}
-{:catch error}
-	{#if contentVisible}
-		<div transition:fade>
-			<ErrorRenderer {error} />
+			<SvxContainer>
+				<h1>{svx.meta.title}</h1>
+				<svelte:component this={svx.content} />
+			</SvxContainer>
 		</div>
 	{/if}
 {/await}
