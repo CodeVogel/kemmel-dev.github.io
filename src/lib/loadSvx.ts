@@ -1,4 +1,6 @@
-export async function loadSvx(slug: string) {
+export async function loadSvx(slug: string, simulateDelay = 0) {
+    if (simulateDelay > 0)
+        await new Promise(resolve => setTimeout(resolve, simulateDelay));
     try {
         const post = await import(`../content/posts/${slug}.svx`);
         return {
