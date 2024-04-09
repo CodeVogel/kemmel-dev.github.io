@@ -1,5 +1,5 @@
 <script lang="ts">
-	import ProjectCard from '$lib/components/card/ProjectCard.svelte';
+	import ProjectCard from '$lib/components/ui/card/ProjectCard.svelte';
 
 	// Loads the data from ./+page.server.ts -> load()
 	export let data;
