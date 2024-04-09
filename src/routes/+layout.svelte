@@ -29,8 +29,7 @@
 	}
 
 	:global(body) {
-		@apply bg-[url('/tile7.svg')];
-		background-size: 500px;
+		@apply bg-gradient-to-b from-accent/50 via-accent via-25% to-background-950;
 	}
 
 	:global(body, main) {
