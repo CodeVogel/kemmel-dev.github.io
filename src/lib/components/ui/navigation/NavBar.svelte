@@ -6,8 +6,7 @@
 	// The routes to be displayed in the navbar.
 	const routes = [
 		{ name: 'Home', href: '/', hovered: false },
-		{ name: 'Projects', href: '/projects/', hovered: false },
-		{ name: 'About', href: '/about/', hovered: false }
+		{ name: 'Projects', href: '/projects/', hovered: false }
 	];
 
 	$: navButtonColor = (route: any) => {
