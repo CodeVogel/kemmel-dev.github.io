@@ -8,8 +8,8 @@
 		<div class="min-w-[27ch] md:min-w-[34ch] speech-bubble">
 			<AutoGrowTypeWriter
 				class="p-6 rounded-lg bg-accent"
-				msDelayBetweenChars={50}
-				msDelayBetweenElements={500}
+				msDelayBetweenChars={20}
+				msDelayBetweenElements={350}
 				preRender={false}
 			>
 				<h1>Hi!</h1>
