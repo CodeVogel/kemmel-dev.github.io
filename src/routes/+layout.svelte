@@ -7,7 +7,7 @@
 	import WaveBorder from '$lib/components/ui/polish/WaveBorder.svelte';
 </script>
 
-<main class="flex flex-col text-white overflow-x-clip">
+<main class="flex flex-col font-sans text-white overflow-x-clip">
 	<NavBar class="h-[6rem] fixed bg-background-800 z-50" />
 	<WaveBorder
 		flipY={false}
