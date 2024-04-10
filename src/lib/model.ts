@@ -1,5 +1,20 @@
 export type PostCategory = 'project' | 'blog';
 
+export type WorkExperience = {
+    company: {
+        name: string;
+        logo: string;
+        website: string;
+    };
+    position: string;
+    description: string;
+    location: string;
+    timeSpan: {
+        startDate: string;
+        endDate: string;
+    };
+};
+
 export type Post = {
 	title: string;
 	slug: string;
