@@ -1,0 +1,72 @@
+[
+    {
+        "company": {
+            "name": "&Ranj",
+            "logo": "/logos/ranj.svg",
+            "website": "https://www.ranj.com/"
+        },
+        "position": "Graduation Intern: AI in games",
+        "description": "Performed a study on how game designers can use large-language models to provide meaningful conversation in serious games, and built a proof-of-concept game.",
+        "location": "Rotterdam, The Netherlands",
+        "timeSpan": {
+            "startDate": "01/09/2023",
+            "endDate": "01/02/2024"
+        }
+    },
+    {
+        "company": {
+            "name": "University of Amsterdam",
+            "logo": "/logos/uva.svg",
+            "website": "https://www.uva.nl/"
+        },
+        "position": "Teacher's Assistant: Minor Programming",
+        "description": "Assistant tutor of the Minor Programming at the University of Amsterdam. Organised and supervised a learning route for Game Development in Unity, and taught programming in C, C# & Python.",
+        "location": "Amsterdam, The Netherlands",
+        "timeSpan": {
+            "startDate": "01/09/2022",
+            "endDate": "01/01/2024"
+        }
+    },
+    {
+        "company": {
+            "name": "Degoma",
+            "logo": "/logos/degoma.svg",
+            "website": "https://www.degoma.games/"
+        },
+        "position": "Intern Design, Development and Porting",
+        "description": "Worked on content for ‘Reggie, his cousin, two scientists and most likely the end of the world’. Designing and implementing game mechanics for a boss, and studying how the IP should be ported to a mobile game.",
+        "location": "Amsterdam, The Netherlands",
+        "timeSpan": {
+            "startDate": "01/09/2021",
+            "endDate": "01/02/2022"
+        }
+    },
+    {
+        "company": {
+            "name": "Super-prof",
+            "logo": "/logos/tutor.svg",
+            "website": "https://www.super-prof.nl/bsc-game-development-software-engineering-geeft-basiscursus-programmeren-python-html-css-java-script-game.html"
+        },
+        "position": "Self-employed Tutor Software Engineering",
+        "description": "Multiple years of experience as a self-employed tutor of software engineering / programming.",
+        "location": "Amsterdam, The Netherlands",
+        "timeSpan": {
+            "startDate": "01/09/2021",
+            "endDate": "Present"
+        }
+    },
+    {
+        "company": {
+            "name": "Grafisch Lyceum Utrecht",
+            "logo": "/logos/glu.svg",
+            "website": "https://www.glu.nl/"
+        },
+        "position": "Teacher Creative Software Development",
+        "description": "Teacher Web Development for the course ‘Creative Software Development’.",
+        "location": "Utrecht, The Netherlands",
+        "timeSpan": {
+            "startDate": "01/09/2021",
+            "endDate": "Present"
+        }
+    }
+]
