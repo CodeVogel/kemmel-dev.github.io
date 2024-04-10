@@ -2,10 +2,10 @@
 	import BirdHero from '../lib/components/ui/home/BirdHero.svelte';
 	import HeroCard from '$lib/components/ui/home/WorkExperience.svelte';
 
-	export let data;
+	export let data: import('./$types').PageServerData;
 </script>
 
 <div class="flex flex-col items-center">
 	<BirdHero />
-	<HeroCard workExperience={data.workExperience} />
+	<HeroCard workExperience={data.workExperiences} />
 </div>
