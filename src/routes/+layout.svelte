@@ -11,7 +11,7 @@
 	<NavBar class="h-[6rem] fixed bg-background-800 z-50" />
 	<WaveBorder
 		flipY={false}
-		class="mt-[6rem] fixed h-[4rem] bg-gradient-to-b from-background-800 to-background-400 border-b-[1px] border-accent/50 shadow-2xl z-50"
+		class="mt-[6rem] fixed h-[4rem] bg-gradient-to-b from-background-800 to-background-400 border-b-[1px] border-accent/50 shadow-2xl shadow-black/50 z-50"
 	/>
 	<div class="flex flex-col flex-grow mt-[10rem]">
 		<slot />
@@ -29,7 +29,7 @@
 	}
 
 	:global(body) {
-		@apply bg-gradient-to-b from-accent/50 via-accent via-25% to-background-950;
+		@apply bg-accent;
 	}
 
 	:global(body, main) {
