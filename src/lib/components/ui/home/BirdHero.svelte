@@ -3,7 +3,7 @@
 	import BirdLogo from '$lib/components/ui/polish/logo/BirdLogo.svelte';
 </script>
 
-<div class="flex flex-col items-center justify-end gap-y-8 min-h-[calc(8rem+10lh)] mt-8">
+<div class="flex flex-col items-center justify-end gap-y-8 min-h-[calc(8rem+10lh)] mt-16 lg:mt-32">
 	<div class="speech-bubble">
 		<AutoGrowTypeWriter
 			class="p-6 rounded-lg shadow-xl shadow-black/50 min-w-80"
