@@ -5,33 +5,27 @@
 	export let experience: WorkExperience;
 </script>
 
-<div
-	class="flex flex-col p-4 mb-4 border-2 shadow-md sm:flex-row rounded-xl gap-x-8 gap-y-4 bg-gradient-to-br from-background-300 to-background-800 border-accent-400"
->
-	<a class="grid items-center [&_div]:hover:bg-primary basis-1/6" href={experience.company.website}>
-		<ClipSvg
-			path={experience.company.logo}
-			class="flex items-center justify-center w-24 h-16 bg-white"
-		></ClipSvg>
+<div class="grid grid-cols-[min-content,min-content] gap-x-4">
+	<a
+		class="[&_div]:hover:bg-primary bg-gradient-to-t from-black to-accent-500 border-white/20 border-[1px] shadow-xl shadow-black/80 hover:bg-primary w-32 p-4 rounded-3xl"
+		href={experience.company.website}
+	>
+		<ClipSvg path={experience.company.logo} class="bg-white aspect-square"></ClipSvg>
 	</a>
-	<div class="flex flex-col basis-3/6">
-		<h1 class="mb-2 font-mono text-primary">{experience.position}</h1>
-		<i>{experience.description}</i>
-	</div>
-	<div class="flex justify-end flex-grow">
-		<div class="grid grid-cols-[min-content,min-content] gap-x-4">
-			<span><iconify-icon icon="mdi-location"></iconify-icon></span>
-			<p>{experience.location}</p>
-			<p>From:</p>
-			<p>{experience.timeSpan.startDate}</p>
-			<p>To:</p>
-			<p>{experience.timeSpan.endDate}</p>
+	<div class="flex flex-col justify-center min-w-64">
+		<h1 class="font-mono text-primary">{experience.position}</h1>
+		<div class="text-xs text-white/50 gap-x-2">
+			<span
+				><iconify-icon icon="mdi-location" class="text-primary"></iconify-icon>
+				{experience.location}</span
+			>
+			<p>{experience.timeSpan.startDate} - {experience.timeSpan.endDate}</p>
 		</div>
 	</div>
 </div>
 
 <style lang="scss">
 	h1 {
-		@apply text-lg;
+		@apply font-bold text-sm;
 	}
 </style>

@@ -4,9 +4,11 @@
 	export let workExperience: WorkExperience[];
 </script>
 
-<div class="max-w-4xl p-4 m-8 bg-background-100/25 rounded-3xl">
-	<h1 class="mb-8">Experience</h1>
-	{#each workExperience as experience}
-		<ExperienceCard {experience}></ExperienceCard>
-	{/each}
+<div class="flex flex-col items-center mt-[50vh] gap-y-8">
+	<h1 class="text-center">Experience</h1>
+	<div class="flex flex-col gap-y-8">
+		{#each workExperience as experience}
+			<ExperienceCard {experience}></ExperienceCard>
+		{/each}
+	</div>
 </div>
