@@ -9,7 +9,7 @@
 	<Viewnimation>
 		<h1 class="text-center">Experience</h1>
 	</Viewnimation>
-	<div class="flex flex-col w-full gap-y-8">
+	<div class="grid items-center grid-cols-1 w-max-lg gap-y-8">
 		{#each workExperience as experience, i}
 			<Viewnimation fromLeft={i % 2 !== 0}>
 				<ExperienceCard {experience}></ExperienceCard>

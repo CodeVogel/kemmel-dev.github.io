@@ -6,7 +6,7 @@
 </script>
 
 <div
-	class="grid grid-cols-[min-content,auto] gap-x-4 bg-background-300 border-white/20 border-[1px] p-4 rounded-2xl mx-2"
+	class="grid grid-cols-[min-content,auto] gap-x-4 bg-background-300/20 border-white/20 border-[1px] p-4 rounded-2xl mx-2 max-w-lg"
 >
 	<a
 		class="[&_div]:hover:bg-primary bg-gradient-to-t from-black to-accent-500 border-white/20 border-[1px] shadow-xl shadow-black/80 hover:bg-primary w-32 p-4 rounded-3xl"

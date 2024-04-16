@@ -29,7 +29,7 @@
 	}
 
 	:global(body) {
-		@apply bg-accent;
+		background-image: url('/tile2.png');
 	}
 
 	:global(body, main) {

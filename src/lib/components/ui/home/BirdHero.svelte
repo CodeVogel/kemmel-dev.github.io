@@ -4,9 +4,9 @@
 </script>
 
 <div class="flex flex-col items-center justify-end gap-y-8 min-h-[calc(8rem+10lh)] mt-16 lg:mt-32">
-	<div class="speech-bubble">
+	<div class="relative speech-bubble rounded-2xl bg-background-300">
 		<AutoGrowTypeWriter
-			class="p-6 rounded-lg shadow-xl shadow-black/50 min-w-80"
+			class="p-6 rounded-lg shadow-xl bg-inherit shadow-black/80 min-w-80"
 			msDelayBetweenChars={20}
 			msDelayBetweenElements={350}
 			preRender={false}
@@ -40,10 +40,6 @@
 		@apply text-3xl;
 	}
 
-	.speech-bubble {
-		@apply relative rounded-2xl bg-background-300;
-	}
-
 	.speech-bubble:after {
 		content: '';
 		position: absolute;
@@ -51,11 +47,12 @@
 		left: 50%;
 		width: 0;
 		height: 0;
-		border: 1em solid transparent;
+		border: 2em solid transparent;
 		border-top-color: theme('colors.background.300');
 		border-bottom: 0;
 		border-left: 0;
 		margin-left: -0.5em;
 		margin-bottom: -1em;
+		transform: scaleY(1.5);
 	}
 </style>

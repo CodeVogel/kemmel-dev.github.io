@@ -25,7 +25,7 @@
 	export { className as class };
 </script>
 
-<nav class="{className} flex flex-col items-center w-full">
+<nav class="{className} flex flex-col items-center w-full bg-[url(tile2.png)]">
 	<a href="/" class="mt-2">
 		<WordLogo />
 	</a>
