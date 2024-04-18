@@ -1,6 +1,6 @@
 <script lang="ts">
 	import AutoGrowTypeWriter from '$lib/components/ui/polish/typewriter/AutoGrowTypeWriter.svelte';
-	import BirdLogo from '$lib/components/ui/polish/logo/BirdLogo.svelte';
+	import Logo from '$lib/components/ui/polish/logo/Logo.svelte';
 </script>
 
 <div class="flex flex-col items-center justify-end gap-y-8 min-h-[calc(8rem+10lh)] mt-16 lg:mt-32">
@@ -32,7 +32,7 @@
 			</div>
 		</AutoGrowTypeWriter>
 	</div>
-	<BirdLogo class="w-[8rem] shadow-[5px_6px_15px_2px_#000000aa] rounded-[100vw]" />
+	<Logo class="w-[8rem] shadow-[5px_6px_15px_2px_#000000aa] rounded-[100vw]" />
 </div>
 
 <style>
