@@ -36,14 +36,16 @@
 
 <style>
 	.out-view {
-		@apply opacity-0 blur-lg;
+		@apply opacity-0;
 	}
 
 	.viewnimation {
-		@apply transition-all duration-[1000ms];
+		transition:
+			opacity 1.5s,
+			transform 1s;
 	}
 
 	:global(.in-view) {
-		@apply !opacity-100  !translate-x-0 !blur-0;
+		@apply !opacity-100  !translate-x-0;
 	}
 </style>
