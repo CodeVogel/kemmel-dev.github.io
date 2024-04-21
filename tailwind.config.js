@@ -1,10 +1,12 @@
 import { fontFamily } from 'tailwindcss/defaultTheme';
 
-let spacings = {
+const spacings = {
 	nav: '6rem',
 	wave: '4rem',
 	footer: '6rem'
 };
+
+const pageHeight = `calc(100dvh - ${spacings.nav} - ${spacings.wave} - ${spacings.footer})`;
 
 /** @type {import('tailwindcss').Config} */
 const config = {
@@ -83,8 +85,9 @@ const config = {
 			spacing: 
 			{	
 				...spacings,
-				navwave: `calc(${spacings.nav} + ${spacings.wave})`,
-			}
+			},
+			height: { page: pageHeight },
+			minHeight: { page: pageHeight },
 		}
 	}
 };
