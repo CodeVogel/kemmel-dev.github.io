@@ -1,5 +1,11 @@
 import { fontFamily } from 'tailwindcss/defaultTheme';
 
+let spacings = {
+	nav: '6rem',
+	wave: '4rem',
+	footer: '6rem'
+};
+
 /** @type {import('tailwindcss').Config} */
 const config = {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
@@ -73,6 +79,11 @@ const config = {
 			fontFamily: {
 				sans: ['"Plus Jakarta Sans"', ...fontFamily.sans],
 				mono: ['"JetBrains Mono"', ...fontFamily.mono]
+			},
+			spacing: 
+			{	
+				...spacings,
+				navwave: `calc(${spacings.nav} + ${spacings.wave})`,
 			}
 		}
 	}
