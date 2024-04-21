@@ -1,7 +1,7 @@
 <script lang="ts">
 </script>
 
-<div class="overflow-visible carousel-item h-page">
+<div class="overflow-y-visible overflow-x-clip carousel-item min-h-page">
 	<slot />
 </div>
 
