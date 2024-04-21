@@ -6,7 +6,7 @@ const spacings = {
 	footer: '6rem'
 };
 
-const pageHeight = `calc(100dvh - ${spacings.nav} - ${spacings.wave} - ${spacings.footer})`;
+const pageHeight = `calc(100dvh - ${spacings.nav} - ${spacings.wave} - ${spacings.wave})`;
 
 /** @type {import('tailwindcss').Config} */
 const config = {
