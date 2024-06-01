@@ -5,7 +5,7 @@
    export let workExperience: WorkExperience[];
 </script>
 
-<div class="flex flex-col items-center w-full mt-4">
+<div class="flex flex-col items-center w-full">
    <Viewnimation>
       <h1 class="text-center">Experience</h1>
    </Viewnimation>
