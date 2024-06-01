@@ -21,9 +21,9 @@
 <div
    bind:this={wrapper}
    class="{className} overflow-hidden rounded-md transition-height"
-   style="{preRender
+   style={preRender
       ? ''
-      : 'height: {contentHeight}px;'} transition-duration: {msDelayHeightTransition}ms;"
+      : `height: ${contentHeight}px; transition: height ${msDelayHeightTransition}ms;`}
 >
    <TypeWriter
       on:elementAdded={updateHeight}
