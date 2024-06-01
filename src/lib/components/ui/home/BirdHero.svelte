@@ -38,7 +38,7 @@
          </AutoGrowTypeWriter>
       </div>
    </div>
-   <Logo class="w-[8rem] mt-8 shadow-[5px_6px_15px_2px_#000000aa] rounded-[100vw]" />
+   <Logo class="w-[8rem] mt-12 shadow-[5px_6px_15px_2px_#000000aa] rounded-[100vw]" />
 </div>
 
 <style>
