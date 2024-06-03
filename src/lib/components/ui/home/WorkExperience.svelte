@@ -9,6 +9,7 @@
 <div class="flex flex-col items-center w-full">
    <Viewnimation>
       <h1 class="text-center">Experience</h1>
+      <p class="mt-2 text-xs text-white/25">(Hover over the cards to see more details)</p>
    </Viewnimation>
    <div class="grid items-center grid-cols-1 w-max-lg pt-8 pb-8">
       <h3 class="text-center text-white/50 font-mono">Current jobs</h3>
