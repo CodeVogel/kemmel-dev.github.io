@@ -27,7 +27,7 @@
 
 <nav class="{className} flex flex-col items-center w-full bg-[url(tile2.png)]">
    <a href="/" class="mt-2">
-      <WordLogo />
+      <img class="w-[20rem]" src="/logos/logo-codevogel-text.svg" />
    </a>
    <div class="grid items-start justify-center grid-flow-col-dense grid-rows-1 gap-x-8">
       {#each routes as route, index}

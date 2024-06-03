@@ -1,6 +1,5 @@
 <script lang="ts">
    import AutoGrowTypeWriter from '$lib/components/ui/polish/typewriter/AutoGrowTypeWriter.svelte';
-   import Logo from '$lib/components/ui/polish/logo/Logo.svelte';
 </script>
 
 <div class="flex flex-col items-center">
@@ -38,7 +37,10 @@
          </AutoGrowTypeWriter>
       </div>
    </div>
-   <Logo class="w-[8rem] mt-12 shadow-[5px_6px_15px_2px_#000000aa] rounded-[100vw]" />
+   <img
+      class="w-[8rem] mt-12 shadow-[5px_6px_15px_2px_#000000aa] rounded-[100vw]"
+      src="/logos/logo-codevogel-head.svg"
+   />
 </div>
 
 <style>
