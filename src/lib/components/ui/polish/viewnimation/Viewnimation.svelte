@@ -10,7 +10,7 @@
             entries.forEach((entry) => {
                if (entry.isIntersecting) {
                   entry.target.classList.add(inviewClass);
-               } else {
+               } else if (!stay) {
                   entry.target.classList.remove(inviewClass);
                }
             });
@@ -24,6 +24,7 @@
    });
 
    export let fromLeft = true;
+   export let stay = true;
 </script>
 
 <div
@@ -43,9 +44,10 @@
       transition:
          opacity 1.5s,
          transform 1s;
+      transition-delay: 0.25s;
    }
 
    :global(.in-view) {
-      @apply !opacity-100  !translate-x-0;
+      @apply !opacity-100 !translate-x-0;
    }
 </style>
