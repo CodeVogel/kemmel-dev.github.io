@@ -9,9 +9,9 @@ export type WorkExperience = {
     position: string;
     description: string;
     location: string;
-    timeSpan: {
-        startDate: string;
-        endDate: string;
+    timespan: {
+        startDate: Date;
+        endDate: Date;
     };
 };
 
@@ -19,7 +19,7 @@ export type Post = {
     title: string;
     slug: string;
     description: string;
-    date: string;
+    date: Date;
     category: PostCategory[];
     published: boolean;
     headerImage: string;
