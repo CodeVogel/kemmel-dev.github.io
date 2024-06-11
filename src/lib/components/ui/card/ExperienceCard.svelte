@@ -14,15 +14,15 @@
    }
 </script>
 
-<div class="grid grid-cols-[min-content,auto] gap-x-4 mx-2 max-w-lg">
-   <a class="[&_div]:hover:bg-primary w-32 p-4" href={experience.company.website}>
-      <ClipSvg path={experience.company.logo} class="bg-white aspect-square"></ClipSvg>
+<div class="mx-2 grid max-w-lg grid-cols-[min-content,auto] gap-x-4">
+   <a class="w-32 p-4 [&_div]:hover:bg-primary" href={experience.company.website}>
+      <ClipSvg path={experience.company.logo} class="aspect-square bg-white"></ClipSvg>
    </a>
-   <div class="flex flex-col justify-center w-full group max-w-[24ch]">
+   <div class="group flex w-full max-w-[24ch] flex-col justify-center">
       <h1 class="font-mono text-primary">{experience.position}</h1>
       <div class="relative">
-         <div class="group-hover:opacity-0 transition-opacity duration-300">
-            <div class="text-white/50 text-xs">
+         <div class="transition-opacity duration-300 group-hover:opacity-0">
+            <div class="text-xs text-white/50">
                <span
                   ><iconify-icon icon="mdi-location" class="text-primary"></iconify-icon>
                   {experience.location}</span
@@ -35,7 +35,7 @@
             </div>
          </div>
          <span
-            class="absolute top-0 opacity-0 group-hover:opacity-100 text-white/50 text-xs transition-opacity duration-300"
+            class="absolute text-xs text-white/50 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
             >{experience.description}</span
          >
       </div>
@@ -44,6 +44,6 @@
 
 <style lang="scss">
    h1 {
-      @apply font-bold text-sm;
+      @apply text-sm font-bold;
    }
 </style>
