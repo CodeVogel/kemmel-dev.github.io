@@ -3,6 +3,7 @@
    import WorkExperience from '$lib/components/ui/home/WorkExperience.svelte';
    import Viewnimation from '$lib/components/ui/polish/viewnimation/Viewnimation.svelte';
    import { onMount } from 'svelte';
+   import Skills from '$lib/components/ui/home/Skills.svelte';
    export let data: import('./$types').PageServerData;
 
    onMount(() => {
@@ -29,5 +30,8 @@
    </div>
    <div>
       <WorkExperience pastWork={data.pastWork} currentWork={data.currentWork} />
+   </div>
+   <div>
+      <Skills />
    </div>
 </div>
