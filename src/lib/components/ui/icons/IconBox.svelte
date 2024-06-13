@@ -5,7 +5,7 @@
    export let icons: LinkIcon[];
 </script>
 
-<div class="flex flex-wrap justify-center">
+<div class="flex flex-wrap justify-center max-w-48">
    {#each icons as linkIcon}
       <a class="w-16 [&_div]:hover:bg-primary" href={linkIcon.url}>
          <ClipSvg path="logos/{linkIcon.icon}" class="aspect-square bg-white" />
