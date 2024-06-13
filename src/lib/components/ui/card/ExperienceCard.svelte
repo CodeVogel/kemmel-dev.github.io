@@ -1,5 +1,5 @@
 <script lang="ts">
-   import ClipSvg from '$lib/components/ui/svg/ClipSvg.svelte';
+   import ClipSvg from '$lib/components/ui/icons/ClipSvg.svelte';
    import type { WorkExperience } from '$lib/model';
 
    export let experience: WorkExperience;
