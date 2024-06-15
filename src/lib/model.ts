@@ -11,7 +11,7 @@ export type WorkExperience = {
    location: string;
    timespan: {
       startDate: Date;
-      endDate: Date;
+      endDate: Date | undefined;
    };
 };
 

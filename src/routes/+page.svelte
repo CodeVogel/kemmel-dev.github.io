@@ -1,11 +1,9 @@
 <script lang="ts">
    import BirdHero from '../lib/components/ui/home/BirdHero.svelte';
-   import WorkExperience from '$lib/components/ui/home/WorkExperience.svelte';
    import Viewnimation from '$lib/components/ui/polish/viewnimation/Viewnimation.svelte';
    import { onMount } from 'svelte';
    import Skills from '$lib/components/ui/home/Skills.svelte';
-
-   export let data: import('./$types').PageServerData;
+   import WorkExperience from '$lib/components/ui/home/WorkExperience.svelte';
 
    onMount(() => {
       // on scroll, change the color of the icon
@@ -30,7 +28,7 @@
       </Viewnimation>
    </div>
    <div>
-      <WorkExperience pastWork={data.pastWork} currentWork={data.currentWork} />
+      <WorkExperience />
    </div>
    <div>
       <Skills />
