@@ -1,0 +1,70 @@
+[
+  {
+    "company": {
+      "name": "Super-prof",
+      "logo": "/logos/super-prof.svg",
+      "website": "https://www.super-prof.nl/bsc-games-software-docent-bij-glu-geeft-basiscursus-bijles-programmeren-taal-naar-keuze-game-development-unity.html"
+    },
+    "position": "Freelance Tutor Software Engineering",
+    "description": "Multiple years of experience as a freelance tutor for software engineering and game development in Unity.",
+    "location": "Amsterdam, NL",
+    "timespan": {
+      "startDate": "01-09-2021"
+    }
+  },
+  {
+    "company": {
+      "name": "Grafisch Lyceum Utrecht",
+      "logo": "/logos/glu.svg",
+      "website": "https://www.glu.nl/"
+    },
+    "position": "Teacher Creative Software Development",
+    "description": "Teacher Web Development for the course ‘Creative Software Development’.",
+    "location": "Utrecht, NL",
+    "timespan": {
+      "startDate": "01-04-2024"
+    }
+  },
+  {
+    "company": {
+      "name": "&Ranj",
+      "logo": "/logos/ranj.svg",
+      "website": "https://www.ranj.com/"
+    },
+    "position": "Graduation Intern: AI in games",
+    "description": "Performed a study on how game designers can use large-language models to provide meaningful conversation in serious games, and built a proof-of-concept game.",
+    "location": "Rotterdam, NL",
+    "timespan": {
+      "startDate": "01-09-2023",
+      "endDate": "01-02-2024"
+    }
+  },
+  {
+    "company": {
+      "name": "University of Amsterdam",
+      "logo": "/logos/uva.svg",
+      "website": "https://www.uva.nl/"
+    },
+    "position": "Teacher's Assistant: Minor Programming",
+    "description": "Assistant tutor of the Minor Programming at the University of Amsterdam. Organised and supervised a learning route for Game Development in Unity, and taught programming in C, C# & Python.",
+    "location": "Amsterdam, NL",
+    "timespan": {
+      "startDate": "01-09-2022",
+      "endDate": "01-01-2024"
+    }
+  },
+  {
+    "company": {
+      "name": "Degoma",
+      "logo": "/logos/degoma.svg",
+      "website": "https://www.degoma.games/"
+    },
+    "position": "Intern Design, Development and Porting",
+    "description": "Worked on content for ‘Reggie, his cousin, two scientists and most likely the end of the world’. Designing and implementing game mechanics for a boss, and studying how the IP should be ported to a mobile game.",
+    "location": "Amsterdam, NL",
+    "timespan": {
+      "startDate": "01-09-2021",
+      "endDate": "01-02-2022"
+    }
+  }
+]
