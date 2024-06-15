@@ -1,8 +1,7 @@
-import type { WorkExperience } from '$lib/model';
+import type { PageServerLoad } from './$types';
 
-/** @type {import('./$types').PageServerLoad} */
-export async function load({ fetch }) {
-    const response = await fetch('/api/work');
-    const data = await response.json();
-    return { "currentWork": data.currentWork, "pastWork": data.pastWork };
+export const load: PageServerLoad = async ({ fetch }) => {
+   const workResponse = await fetch('/api/work');
+   const workData = await workResponse.json();
+   return { "currentWork": workData.currentWork, "pastWork": workData.pastWork };
 }
