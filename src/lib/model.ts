@@ -15,10 +15,16 @@ export type WorkExperience = {
    };
 };
 
+export type Skill = {
+   title: string;
+   svgPath: string;
+   link: string;
+}
+
 export type LinkIcon = {
-   name: string;
-   icon: string;
-   url: string;
+   title: string;
+   svgPath: string;
+   link: string;
 }
 
 export type Post = {

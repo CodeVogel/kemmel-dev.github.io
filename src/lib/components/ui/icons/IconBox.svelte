@@ -5,10 +5,10 @@
    export let icons: LinkIcon[];
 </script>
 
-<div class="flex flex-wrap justify-center max-w-48">
+<div class="flex max-w-48 flex-wrap justify-center">
    {#each icons as linkIcon}
-      <a class="w-16 [&_div]:hover:bg-primary" href={linkIcon.url}>
-         <ClipSvg path="logos/{linkIcon.icon}" class="aspect-square bg-white" />
+      <a class="w-16 [&_div]:hover:bg-primary" href={linkIcon.link}>
+         <ClipSvg path="logos/{linkIcon.svgPath}" class="aspect-square bg-white" />
       </a>
    {/each}
 </div>
