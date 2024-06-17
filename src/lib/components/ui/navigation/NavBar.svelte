@@ -6,7 +6,8 @@
    // The routes to be displayed in the navbar.
    const routes = [
       { name: 'Home', href: '/', hovered: false },
-      { name: 'Projects', href: '/projects/', hovered: false }
+      { name: 'Projects', href: '/projects/', hovered: false },
+      { name: 'Contact', href: '/contact/', hovered: false }
    ];
 
    $: navButtonColor = (route: any) => {
@@ -25,16 +26,16 @@
    export { className as class };
 </script>
 
-<nav class="{className} flex flex-col items-center w-full bg-[url(tile2.png)]">
+<nav class="{className} flex w-full flex-col items-center bg-[url(tile2.png)]">
    <a href="/" class="mt-2">
       <img class="w-[20rem]" src="/logos/logo-codevogel-text.svg" />
    </a>
-   <div class="grid items-start justify-center grid-flow-col-dense grid-rows-1 gap-x-8">
+   <div class="grid grid-flow-col-dense grid-rows-1 items-start justify-center gap-x-8">
       {#each routes as route, index}
          <NavButton
             class="{navButtonColor(
                route
-            )} underline decoration-transparent hover:decoration-primary transition-colors duration-500"
+            )} underline decoration-transparent transition-colors duration-500 hover:decoration-primary"
             name={route.name}
             href={route.href}
             bind:hovered={route.hovered}
