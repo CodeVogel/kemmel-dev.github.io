@@ -20,8 +20,8 @@
    </a>
    <div class="group flex w-full max-w-[24ch] flex-col justify-center">
       <h1 class="font-mono text-primary">{experience.position}</h1>
-      <div class="relative">
-         <div class="transition-opacity duration-300 group-hover:opacity-0 group-hover:hidden">
+      <div>
+         <div class="transition-all duration-500 group-hover:max-h-0 group-hover:opacity-0">
             <div class="text-xs text-white/50">
                <span
                   ><iconify-icon icon="mdi-location" class="text-primary"></iconify-icon>
@@ -34,10 +34,11 @@
                </p>
             </div>
          </div>
-         <span
-            class="hidden text-xs text-white/50 opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-hover:block"
-            >{experience.description}</span
+         <p
+            class="max-h-0 text-xs text-white/50 opacity-0 transition-all duration-500 group-hover:max-h-[500px] group-hover:opacity-100"
          >
+            {experience.description}
+         </p>
       </div>
    </div>
 </div>
