@@ -5,7 +5,7 @@
 
 <h1 class="text-center">Skills</h1>
 
-<div class="flex flex-col items-center [&_div]:m-2">
+<div class="flex flex-col items-center gap-y-4">
    <h3 class="text-white/50">Game Engines</h3>
    <SkillBox skills={skills.gameEngines} />
    <h3 class="text-white/50">Design Tools</h3>
