@@ -1,7 +1,6 @@
 <script lang="ts">
-   import ClipSvg from '$lib/components/ui/icons/ClipSvg.svelte';
    import type { WorkExperience } from '$lib/model';
-
+   import LinkIcon from '$lib/components/ui/icons/LinkIcon.svelte';
    export let experience: WorkExperience;
 
    function formatDate(date: Date | undefined) {
@@ -15,9 +14,11 @@
 </script>
 
 <div class="mx-2 grid max-w-lg grid-cols-[min-content,auto] gap-x-4">
-   <a class="w-32 p-4 [&_div]:hover:bg-primary" href={experience.company.website}>
-      <ClipSvg path={experience.company.logo} class="aspect-square bg-white"></ClipSvg>
-   </a>
+   <LinkIcon
+      path={experience.company.logo}
+      link={experience.company.website}
+      class="!w-32 p-4 [&_div]:hover:bg-primary"
+   ></LinkIcon>
    <div class="group flex w-full max-w-[24ch] flex-col justify-center">
       <h1 class="font-mono text-primary">{experience.position}</h1>
       <div>

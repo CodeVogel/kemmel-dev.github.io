@@ -1,14 +1,12 @@
 <script lang="ts">
-   import type { LinkIcon } from '$lib/model';
-   import ClipSvg from '$lib/components/ui/icons/ClipSvg.svelte';
+   import LinkIcon from '$lib/components/ui/icons/LinkIcon.svelte';
+   import type { LinkIcon as LinkIconModel } from '$lib/model';
 
-   export let icons: LinkIcon[];
+   export let icons: LinkIconModel[];
 </script>
 
-<div class="flex max-w-48 flex-wrap justify-center">
+<div class="flex max-w-48 flex-wrap justify-center gap-x-4 gap-y-4">
    {#each icons as linkIcon}
-      <a class="w-16 [&_div]:hover:bg-primary" href={linkIcon.link}>
-         <ClipSvg path="logos/{linkIcon.svgPath}" class="aspect-square bg-white" />
-      </a>
+      <LinkIcon path="/logos/{linkIcon.svgPath}" link={linkIcon.link}></LinkIcon>
    {/each}
 </div>
