@@ -4,9 +4,9 @@
 
    export let experience: WorkExperience;
 
-   function formatDate(date: Date) {
+   function formatDate(date: Date | undefined) {
+      if (!date) return 'Present';
       const d = new Date(date);
-      if (isNaN(d.getTime())) return 'Present';
       return d.toLocaleDateString('en-US', {
          month: 'short',
          year: 'numeric'
