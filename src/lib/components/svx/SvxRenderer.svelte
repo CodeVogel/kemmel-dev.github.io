@@ -17,7 +17,7 @@
    </div>
 {:then svx}
    {#if contentVisible}
-      <div class="flex w-full flex-grow flex-col items-center" transition:fade>
+      <div class="flex w-full flex-grow flex-col items-center gap-y-4" transition:fade>
          <div class="post-container">
             <h1>{svx.meta.title}</h1>
             <svelte:component this={svx.content} />
@@ -30,6 +30,10 @@
    :global {
       .post-container {
          @apply mb-[-6rem] flex w-[100%] max-w-[64ch] flex-grow flex-col border-2 border-accent bg-background-950 px-8 pb-[7rem];
+
+         img {
+            @apply my-4;
+         }
 
          h1 {
             @apply my-4 py-4 first:mt-0;
@@ -45,7 +49,23 @@
          }
 
          ol {
-            @apply list-inside list-none text-primary;
+            @apply list-inside text-primary;
+         }
+
+         ul {
+            @apply list-inside list-disc;
+         }
+
+         ul ul {
+            @apply ps-8;
+         }
+
+         ul li {
+            @apply my-2;
+         }
+
+         ::marker {
+            @apply text-primary;
          }
 
          .toc-item {
@@ -68,6 +88,10 @@
 
          .shiki {
             @apply overflow-x-scroll;
+         }
+
+         a {
+            @apply text-primary underline;
          }
 
          code {
