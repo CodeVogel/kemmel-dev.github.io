@@ -5,9 +5,9 @@
    export let data;
 </script>
 
-<div class="flex justify-center w-full">
+<div class="flex w-full justify-center">
    <div
-      class="grid items-center flex-grow max-w-screen-xl grid-cols-1 p-8 sm:grid-cols-2 md:grid-cols-3 gap-y-6 gap-x-12"
+      class="grid max-w-screen-xl flex-grow grid-cols-1 items-center gap-x-12 gap-y-6 p-8 sm:grid-cols-2"
    >
       {#each data.posts as post}
          <ProjectCard {post} />
