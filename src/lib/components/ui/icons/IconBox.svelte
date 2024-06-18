@@ -5,7 +5,7 @@
    export let icons: LinkIconModel[];
 </script>
 
-<div class="flex max-w-48 flex-wrap justify-center gap-x-4 gap-y-4">
+<div class="flex max-w-48 flex-wrap justify-center gap-x-4 gap-y-4 sm:max-w-full">
    {#each icons as linkIcon}
       <LinkIcon path="/logos/{linkIcon.svgPath}" link={linkIcon.link}></LinkIcon>
    {/each}
