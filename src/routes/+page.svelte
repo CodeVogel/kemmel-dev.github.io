@@ -4,6 +4,7 @@
    import { onMount } from 'svelte';
    import Skills from '$lib/components/ui/home/Skills.svelte';
    import WorkExperience from '$lib/components/ui/home/WorkExperience.svelte';
+   import Socials from '$lib/components/ui/home/Socials.svelte';
 
    onMount(() => {
       const scrollIndicator = document.querySelector('#scroll-indicator') as HTMLElement | null;
@@ -23,7 +24,7 @@
    });
 </script>
 
-<div class="grid grid-cols-1 gap-y-8">
+<div class="mb-16 grid grid-cols-1 gap-y-32">
    <iconify-icon
       id="scroll-indicator"
       icon="line-md:arrow-down"
@@ -34,9 +35,8 @@
          <BirdHero />
       </Viewnimation>
    </div>
-   <div>
-      <WorkExperience />
-   </div>
+   <Socials />
+   <WorkExperience />
    <div>
       <Skills />
    </div>
