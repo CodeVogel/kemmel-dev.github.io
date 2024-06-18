@@ -26,12 +26,12 @@
    export { className as class };
 </script>
 
-<nav class="{className} flex w-full flex-col items-center bg-[url(tile2.png)]">
+<nav class="{className} flex w-full flex-col items-center">
    <a href="/" class="mt-2">
       <img class="w-[20rem]" src="/logos/logo-codevogel-text.svg" />
    </a>
    <div class="grid grid-flow-col-dense grid-rows-1 items-start justify-center gap-x-8">
-      {#each routes as route, index}
+      {#each routes as route}
          <NavButton
             class="{navButtonColor(
                route
