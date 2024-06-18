@@ -28,7 +28,7 @@
    <iconify-icon
       id="scroll-indicator"
       icon="line-md:arrow-down"
-      class="fixed bottom-6 right-6 hidden text-4xl text-white/50"
+      class="fixed bottom-6 right-6 hidden text-4xl text-white/50 md:bottom-16 md:right-16 md:text-6xl"
    ></iconify-icon>
    <div class="flex min-h-[calc(100dvh-theme(spacing.nav))] w-full flex-col items-center">
       <Viewnimation>
