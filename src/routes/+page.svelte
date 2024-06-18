@@ -35,7 +35,9 @@
          <BirdHero />
       </Viewnimation>
    </div>
-   <Socials />
+   <Viewnimation fromLeft={false}>
+      <Socials />
+   </Viewnimation>
    <WorkExperience />
    <div>
       <Skills />
