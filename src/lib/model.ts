@@ -34,7 +34,6 @@ export type Post = {
    date: Date;
    category: PostCategory[];
    published: boolean;
-   headerImage: string;
    youtubeURL?: string;
 };
 
@@ -47,7 +46,6 @@ export function missingPostProps(frontMatter: any) {
       'date',
       'category',
       'published',
-      'headerImage'
    ];
    const missingProperties = requiredProperties.filter(
       (prop) => frontMatter[prop] === undefined || frontMatter[prop] === null
