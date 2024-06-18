@@ -27,7 +27,7 @@
    <div class="flex h-64 flex-col">
       {#if post.youtubeURL != undefined}
          <iframe
-            class="flex aspect-video flex-grow"
+            class="flex flex-grow"
             src="{post.youtubeURL}&amp;controls=0"
             title="YouTube video player"
             frameborder="0"
