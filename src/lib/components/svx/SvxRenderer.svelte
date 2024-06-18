@@ -9,7 +9,7 @@
 
 {#await loadSvx(slug)}
    <div
-      class="grid justify-center grid-rows-1 m-8"
+      class="m-8 grid grid-rows-1 justify-center"
       transition:fade
       on:outroend={() => (contentVisible = true)}
    >
@@ -17,7 +17,7 @@
    </div>
 {:then svx}
    {#if contentVisible}
-      <div class="flex flex-col items-center flex-grow w-full" transition:fade>
+      <div class="flex w-full flex-grow flex-col items-center" transition:fade>
          <div class="post-container">
             <h1>{svx.meta.title}</h1>
             <svelte:component this={svx.content} />
@@ -29,14 +29,14 @@
 <style lang="scss">
    :global {
       .post-container {
-         @apply flex flex-col flex-grow mb-[-6rem] pb-[7rem] max-w-[64ch] w-[100%] bg-background-950 border-accent border-2 px-8;
+         @apply mb-[-6rem] flex w-[100%] max-w-[64ch] flex-grow flex-col border-2 border-accent bg-background-950 px-8 pb-[7rem];
 
          h1 {
-            @apply py-4 my-4 first:mt-0;
+            @apply my-4 py-4 first:mt-0;
          }
 
          .toc {
-            @apply px-4 py-4 rounded-3xl border-[2px] bg-gradient-to-t from-accent/50 to-background-900/50  border-accent/70;
+            @apply max-w-64 rounded-3xl border-[2px] border-accent/70 bg-gradient-to-t from-accent/50 to-background-900/50 px-4 py-4;
          }
 
          .toc::before {
@@ -45,21 +45,21 @@
          }
 
          ol {
-            @apply text-primary list-inside list-none;
+            @apply list-inside list-none text-primary;
          }
 
          .toc-item {
-            @apply border-b-2 border-accent pt-4 pb-5 text-justify;
+            @apply border-b-2 border-accent pb-5 pt-4 text-justify;
             line-height: 100%;
          }
 
          .toc-link {
-            @apply underline hover:bg-primary hover:text-black hover:rounded-sm;
+            @apply underline hover:rounded-sm hover:bg-primary hover:text-black;
          }
 
          .toc-item::before {
             content: '>';
-            @apply me-2 text-white font-extralight no-underline;
+            @apply me-2 font-extralight text-white no-underline;
          }
 
          .toc-item:last-child {
