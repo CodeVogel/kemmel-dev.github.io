@@ -7,20 +7,16 @@
    import WaveBorder from '$lib/components/ui/polish/WaveBorder.svelte';
 </script>
 
-<main class="flex flex-col font-sans text-white overflow-x-clip">
-   <NavBar class="h-[6rem] fixed bg-background-800 z-50" />
+<main class="flex flex-col overflow-x-clip font-sans text-white">
+   <NavBar class="fixed z-50 h-[6rem] bg-background-800" />
    <WaveBorder
       flipY={false}
-      class="mt-[6rem] fixed h-[4rem] bg-gradient-to-b from-background-800 to-background-400 border-b-[1px] border-accent/50 shadow-2xl shadow-black/50 z-50"
+      class="fixed z-50 mt-[6rem] h-[4rem] border-b-[1px] border-accent/50 bg-gradient-to-b from-background-800 to-background-400 shadow-2xl shadow-black/50"
    />
-   <div class="flex flex-col flex-grow mt-[10rem]">
+   <div class="mt-[10rem] flex flex-grow flex-col">
       <slot />
    </div>
-   {#if $page.url.pathname !== '/'}
-      <Footer class="min-h-[6rem]" />
-   {:else}
-      <WaveBorder flipY={true} class="h-[4rem] " />
-   {/if}
+   <Footer class="min-h-[6rem]" />
 </main>
 
 <style>
