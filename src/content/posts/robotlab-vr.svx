@@ -1,14 +1,14 @@
 ---
 title: Robotlab VR
 description: A VR simulation in which you learn to control and work with industrial robotic arms.
-date: '2024-6-18'
+date: '2022-6-18'
 category: project
 published: true
 youtubeURL: https://www.youtube.com/embed/oIzACzUwmVM?si=CDUOvhxVtIHPsIJR
 ---
 
 <script>
-   const imageRoot = '/projects/robotlab-vr/';
+   import Summary from '$lib/components/svx/Summary.svelte';
 </script>
 
 <div class="flex mt-4">
@@ -17,7 +17,9 @@ youtubeURL: https://www.youtube.com/embed/oIzACzUwmVM?si=CDUOvhxVtIHPsIJR
 
 # What is Robotlab VR?
 
-Robotlab VR was the first big VR project I worked on. At the Amsterdam University of Applied Sciences' esteemed Robot Lab, we recognized the potential dangers associated with working directly with robotic arms. To address these concerns, we set out to create a tool that would allow students to practice and refine their skills in a risk-free virtual setting.
+<Summary>
+   <span class="text-primary">Robotlab VR</span> was the first big VR project I worked on. At the Amsterdam University of Applied Sciences' esteemed Robot Lab, we recognized the potential dangers associated with working directly with robotic arms. To address these concerns, we set out to create a tool that would allow students to practice and refine their skills in a risk-free virtual setting.
+</Summary>
 
 # The goal
 
