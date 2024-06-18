@@ -1,6 +1,6 @@
 <script lang="ts">
    import type { Post } from '$lib/model';
-   import Spinner from '../polish/spinner/Spinner.svelte';
+   import Spinner from '$lib/components/ui/polish/spinner/Spinner.svelte';
 
    export let post: Post;
 
