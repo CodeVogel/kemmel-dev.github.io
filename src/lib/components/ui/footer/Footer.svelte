@@ -8,7 +8,4 @@
 
 <footer class="{className} relative grid items-center">
    <WaveBorder flipY={true} class="absolute bottom-0 h-[6rem]" />
-   {#if $page.url.pathname !== '/' && !$page.url.pathname.startsWith('/contact')}
-      <SocialLinks />
-   {/if}
 </footer>
