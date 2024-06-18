@@ -30,11 +30,13 @@
    export let durationCenter: Circle2Types['durationCenter'] = `${durationMultiplier * 3}s`;
 </script>
 
-<div
-   class="circle"
-   class:pause-animation={pause}
-   style="--size: {size}{unit}; --colorInner: {colorInner}; --colorCenter: {colorCenter}; --colorOuter: {colorOuter}; --durationInner: {durationInner}; --durationCenter: {durationCenter}; --durationOuter: {durationOuter};"
-/>
+<div class="flex flex-row justify-center">
+   <div
+      class="circle"
+      class:pause-animation={pause}
+      style="--size: {size}{unit}; --colorInner: {colorInner}; --colorCenter: {colorCenter}; --colorOuter: {colorOuter}; --durationInner: {durationInner}; --durationCenter: {durationCenter}; --durationOuter: {durationOuter};"
+   />
+</div>
 
 <style>
    .circle {
