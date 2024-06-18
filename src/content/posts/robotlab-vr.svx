@@ -1,9 +1,10 @@
 ---
 title: Robotlab VR
-description: .
+description: A VR simulation in which you learn to control and work with industrial robotic arms.
 date: '2024-6-18'
 category: project
 published: true
+youtubeURL: https://www.youtube.com/embed/oIzACzUwmVM?si=CDUOvhxVtIHPsIJR
 ---
 
 <script>
