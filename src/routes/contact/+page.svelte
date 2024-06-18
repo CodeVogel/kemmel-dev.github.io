@@ -1,17 +1,12 @@
 <script lang="ts">
-   import IconBox from '$lib/components/ui/icons/IconBox.svelte';
-   import type { LinkIcon } from '$lib/model';
-   import socials from '$lib/data/socials.json';
-
-   const linkIcons: LinkIcon[] = [];
-   linkIcons.push(socials.github);
-   linkIcons.push(socials.linkedIn);
+   import Socials from '$lib/components/ui/home/Socials.svelte';
+   import LinkIcon from '$lib/components/ui/icons/LinkIcon.svelte';
 </script>
 
 <div class="flex justify-center">
-   <div class="m-8 flex max-w-[30ch] flex-col items-center">
+   <div class="m-8 flex max-w-[30ch] flex-col items-center gap-y-4">
       <h1>Contact</h1>
-      <div class="my-8 flex flex-col">
+      <div class="flex flex-col">
          <div>
             I am currently <strong class="text-primary">open to work</strong>.
          </div>
@@ -23,7 +18,10 @@
          <div>Other inquiries, such as questions about one of my projects, are also welcome!</div>
       </div>
 
-      <h3 class="mb-4 italic text-white/50">You can also find me on...</h3>
-      <IconBox icons={linkIcons}></IconBox>
+      <Socials />
+      <div class="flex flex-col items-center gap-y-4">
+         <h2>View my resume</h2>
+         <LinkIcon path="/icons/resume.svg" link="/pdf/resume-kamiel-de-visser.pdf" />
+      </div>
    </div>
 </div>
