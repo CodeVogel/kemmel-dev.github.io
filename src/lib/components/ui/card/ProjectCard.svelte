@@ -1,7 +1,23 @@
 <script lang="ts">
    import type { Post } from '$lib/model';
+   import Spinner from '../polish/spinner/Spinner.svelte';
 
    export let post: Post;
+
+   async function getImageSource(slug: string) {
+      const path = `/projects/${slug}/${slug}`;
+      const gifPath = `${path}.gif`;
+      const pngPath = `${path}.png`;
+
+      // Check if the gif exists
+
+      const gifExists = await fetch(gifPath)
+         .then((res) => res.ok)
+         .catch(() => false);
+
+      if (gifExists) return gifPath;
+      return pngPath;
+   }
 </script>
 
 <a
@@ -11,8 +27,8 @@
    <div class="flex h-64 flex-col">
       {#if post.youtubeURL != undefined}
          <iframe
-            class="flex flex-grow"
-            src="https://www.youtube-nocookie.com/embed/oIzACzUwmVM?si=xU_cO-6pQfrxR2pp&amp;controls=0"
+            class="flex aspect-video flex-grow"
+            src="{post.youtubeURL}&amp;controls=0"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -20,10 +36,14 @@
             allowfullscreen
          ></iframe>
       {:else}
-         <div
-            class="flex flex-grow"
-            style="background-image:url(/headers/{post.slug}.png); background-size: cover"
-         ></div>
+         {#await getImageSource(post.slug)}
+            <Spinner />
+         {:then source}
+            <div
+               class="flex flex-grow"
+               style="background-image:url({source}); background-size: cover"
+            ></div>
+         {/await}
       {/if}
 
       <div class="bottom-0 grid min-h-[3lh] grid-cols-5 bg-black/50 p-2">
