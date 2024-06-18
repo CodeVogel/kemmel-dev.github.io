@@ -1,27 +1,25 @@
 ---
 title: Detective Duck
-description: My graduation thesis project.
+description: My graduation thesis. A 'whodunit' game that experiments with real-time dialogue generation using ChatGPT for educational applied games.
 date: '2023-4-14'
 category: project
 published: true
 ---
 
-# First Header
+<script>
+   import Summary from '$lib/components/svx/Summary.svelte';
+</script>
 
-Hello world!
+# What is Detective Duck? 
 
-# Second Header
+<Summary>
+<span class="text-primary">Detective Duck</span> is a 'whodunit' game that experiments with real-time dialogue generation using ChatGPT for educational applied games. The game is designed for <a href="https://www.ranj.com/">&Ranj</a>, a Dutch game studio that specializes in creating serious games. It is the result of my graduation thesis for the Bachelor of Science in Game Development at the Amsterdam University of Applied Sciences.
+</Summary>
 
-This is some text.
+# My contributions
 
-# Third header
-
-Hey friends! 👋
-
-```ts
-function greet(name: string) {
-	console.log(`Hey ${name}! 👋`)
-}
-```
-
-
+**Everything!**
+- Game design
+- Art direction and asset creation
+- Research and development for the real-time dialogue generation system, leveraging ChatGPT
+- Implementation of the dialogue system
